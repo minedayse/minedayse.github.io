@@ -11,14 +11,72 @@
 
 <font face = "Arial" >
 <H1> Exercicios de Processamento Digital de Imagens com OpenCV </H1>
-<H2> Alunas: Dayse e Yasmin. <P>
-Professor: Agostinho Brito. </H2>
 
-<H3> Exercício 1 - Manipulacao de Pixels </H3>
+Alunas: Dayse Maranhao e Yasmin Honorio de Medeiros. <P>
+Professor: Agostinho Brito. <P>
 
-Apos um estudo teorico <P>
+<H2> Exercicio 1 - Manipulacao de Pixels </H2>
 
-<H4> Teoria </H4>
+Este exercicio tem o proposito de ajudar no entendimento sobre manipulacao de imagens, apos um estudo teorico sobre componentes de uma imagem e maneiras de manipula-la. 
+Para receber a imagem, fazer alteracoes nela, criar uma nova e exibi-la, sera utilizado o conjunto de bibliotecas OpenCV. O sistema operacional presente durante esse processo foi o Ubuntu. <P>
+O exercicio consiste em, dado dois valores P1 e P2, transformar uma imagem de forma que a regiao presente entre P1 e P2 conterao o negativo da mesma e o resto se mantera. Para isso, P1 e P2 devem ser valores presentes no conjunto de pixels da imagem e o resultado da transformacao se dara numa regiao com formato retangular. <P>
+
+<H3> Teoria </H3>
+
+A ideia para a execucao desse exercicio consistiu em seu principio de fazer o upload de uma imagem em grayscale (tons de cinza) e ler os valores P1 e P2. Em seguida, deve-se criar uma regiao variando do ponto x do pixel P1 ao ponto x do pixel P2 e do ponto y de P1 ao ponto y de P2. Dentro dessa regiao, uma transformacao sera feita, <P>
+Para finalizar, deve-se gerar uma imagem nova e exibi-la. <P>
+
+<H3> Funcoes </H3>
+
+As funcoes fundamentais para a execucao dessa atividade e o que elas representam sao: <P>
+
+<UL>
+<LI> imread:
+<LI> imshow:
+</UL>
+
+<H3> Imagem </H3>
+
+Para a realizacao do exercicio, foi utilizada a seguinte imagem como base: <P>
+
+
+<H3> Codigo comentado </H3>
+
+
+<H3> Resultados </H3>
+
+<H2> Exercicio 2 - Troca de Regioes </H2>
+
+Com este exercicio, ve-se o resultado do aprendizado base com relacao a manipulacao de imagens. Para ele, sera necessario conceitos basicos de separacao de regioes e programacao. Para a execucao dessa proposta, ainda sera utilizado o conjunto de bibliotecas OpemCV, de forma a receber a imagem, fazer alteracoes nela, criar uma nova e exibi-la. O sistema operacional presente durante esse processo foi o Ubuntu. <P>
+O exercicio consiste em, dado uma imagem, dividi-la em quatro regioes e trocar as posicoes delas. A regiao superior esquerda deve trocar de lugar com a inferior direita e a regiao superior direita deve ser trocada com a inferior esquerda. <P>
+
+<H3> Teoria </H3>
+
+A ideia para o funcionamento desse exercicio comecou com o upload de uma imagem escolhida previamente. Em seguida, para nao gastar mais linhas, deve-se criar logo uma imagem nova e definir o valor de seus pixels de acordo com as regioes da imagem original.
+A separaracao das regioes escolhidas se dara variando do ponto inicial a metade do comprimento da imagem e a metade de sua altura para a regiao superior esquerda. <P>
+A regiao superior direita sera definida do ponto inicial ate a metade da altura para os valores de x e da metade do comprimento ate o final dele para os valores de y. A regiao inferior esquerda sera definida da metade da altura ate o final dela para os valores de x e do ponto inicial ate a metade do comprimento para os valores de y. Seguindo a mesma logica, a ultima regiao sera composta pelo que sobrou. <P>
+Para finalizar, deve-se exibir na tela a nova imagem. <P>
+
+<H3> Funcoes </H3>
+
+As funcoes fundamentais para a execucao dessa atividade e o que elas representam sao: <P>
+
+<UL>
+<LI> imread:
+<LI> imshow:
+</UL>
+
+<H3> Imagem </H3>
+
+Para a realizacao do exercicio, foi utilizada a seguinte imagem como base: <P>
+
+
+<H3> Codigo comentado </H3>
+
+
+<H3> Resultados </H3>
+
+<H3> Teoria </H3>
 
 	<A HREF = "Exercicio1.html" >Exercício1</A><BR>
 
