@@ -398,7 +398,7 @@ Sem bolhas<P>
 <IMG SRC = "Exercicio43.png" width=50% height=50% alt="Exercicio 43">
 
 
-<H2>Exercicio 5 - </H2>
+<H2>Exercicio 5 - Equalizacao de Histograma</H2>
 </center>
 
 Esse exercicio tem como objetivo explorar o conhecimento sobre histogramas de uma imagem e a manipulacao dele atraves do conjunto de bibliotecas OpenCV, alem de utilizar captura de video. Para isso, a ideia e que, para cada imagem gerada, o programa .cpp equalize o histograma da imagem e mostre na tela.<P>
@@ -410,44 +410,288 @@ E importante saber que, para a manipulacao do histograma, foi necessario inicial
 
 <H3><center> Funcoes </center></H3>
 
+<UL>
+<LI> VideoCapture: classe que permite uma variavel fluxo de video, possui como principais funcoes <i>open</i> (abre video da camera) e <i>get</i> (receber informacoes da captura).
+<LI> planes[]: separa a imagem em tons (planos) de vermelho, verde e azul.
+<LI> cvtColor: consegue alterar o sistema de cores.
+<LI> equalizeHist: equaliza diretamente um histograma.
+<LI> merge: junta os planos de cor em uma imagem so.
+<LI> calcHist: recebe referencia a ser processada, calcula o histograma e retorna para uma variavel definida.
+<LI> normalize: normaliza os valores do histograma para o ficarem proporcionais ao maximo e minimo encontrado.
+<LI> line: gera grafico de barras.
+</UL>
 
 <H3><center>Imagem</center></H3>
 
-A imagem utilizada como base para esse exercicio esta mostrada a seguir:<P>
+Uma imagem para servir de previa foi mostrada, utilizando um algoritmo que exibe a imagem captada pela camera e gera o histograma.<P>
 
 <center>
 
+<IMG SRC = "Exemplo5.png" width=50% height=50% alt="Exemplo 5">
 
 <H3> Codigo comentado </H3>
 </center>
+<I>
+#include <iostream>
+<BR>#include <opencv2/opencv.hpp>
+<P>
+using namespace cv;
+<BR>using namespace std;
+<P>
+int main(int argc, char** argv){
+<BR>  Mat rawimage, eqimage;
+<BR>  int width, height;
+<BR>  VideoCapture cap;
+<BR>  vector<Mat> planes;
+<BR>  Mat histR, histG, histB;
+<BR>  int nbins = 64;
+<BR>  float range[] = {0, 256};
+<BR>  const float *histrange = { range };
+<BR>  bool uniform = true;
+<BR>  bool acummulate = false;
+<P>
+  cap.open(0);
+<P>  
+  if(!cap.isOpened()){
+<BR>    cout << "Erro: Cameras indisponiveis.";
+<BR>    return -1;
+<BR>  }
+<P>  
+  width  = cap.get(CV_CAP_PROP_FRAME_WIDTH);
+<BR>  height = cap.get(CV_CAP_PROP_FRAME_HEIGHT);
+<P>
+  cout << "Largura = " << width << endl;
+<BR>  cout << "Altura  = " << height << endl;
+<P>	
+  int histw = nbins, histh = nbins/2;
+<BR>  Mat histImgR(histh, histw, CV_8UC3, Scalar(0,0,0));
+<BR>  Mat histImgG(histh, histw, CV_8UC3, Scalar(0,0,0));
+<BR>  Mat histImgB(histh, histw, CV_8UC3, Scalar(0,0,0));
+<P>
+  while(1){
+<BR>    cap >> rawimage;
+<BR>    cvtColor(rawimage, eqimage, CV_BGR2YCrCb); // Muda a cor de RGB para YCrCb
+<BR>    for (int i=0; i<1; i++) {
+<BR>	    split (eqimage, planes);
+<BR>	    equalizeHist(planes[i], planes[i]);
+<BR>	    merge(planes, eqimage);
+<BR>    }
+<BR>    cvtColor(eqimage, eqimage, CV_YCrCb2BGR); 
+<BR>    calcHist(&planes[0], 1, 0, Mat(), histR, 1,
+<BR>             &nbins, &histrange,
+<BR>             uniform, acummulate);
+<BR>    calcHist(&planes[1], 1, 0, Mat(), histG, 1,
+<BR>             &nbins, &histrange,
+<BR>             uniform, acummulate);
+<BR>    calcHist(&planes[2], 1, 0, Mat(), histB, 1,
+<BR>             &nbins, &histrange,
+<BR>             uniform, acummulate);
+<P>
+
+    normalize(histR, histR, 0, histImgR.rows, NORM_MINMAX, -1, Mat());
+<BR>    normalize(histG, histB, 0, histImgR.rows, NORM_MINMAX, -1, Mat());
+<BR>    normalize(histB, histB, 0, histImgR.rows, NORM_MINMAX, -1, Mat());
+<P>
+    histImgR.setTo(Scalar(0));
+<BR>    histImgG.setTo(Scalar(0));
+<BR>    histImgB.setTo(Scalar(0));
+<P>    
+    for(int i=0; i<nbins; i++){
+<BR>      line(histImgR, Point(i, histh),
+<BR>           Point(i, cvRound(histR.at<float>(i))),
+<BR>           Scalar(0, 0, 255), 1, 8, 0);
+<BR>      line(histImgG, Point(i, histh),
+<BR>           Point(i, cvRound(histG.at<float>(i))),
+<BR>           Scalar(0, 255, 0), 1, 8, 0);
+<BR>      line(histImgB, Point(i, histh),
+<BR>           Point(i, cvRound(histB.at<float>(i))),
+<BR>           Scalar(255, 0, 0), 1, 8, 0);
+<BR>    }
+<BR>    histImgR.copyTo(eqimage(Rect(0, 0       ,nbins, histh)));
+<BR>    histImgG.copyTo(eqimage(Rect(0, histh   ,nbins, histh)));
+<BR>    histImgB.copyTo(eqimage(Rect(0, 2*histh ,nbins, histh)));
+<BR>    imshow("image", eqimage);
+<BR>    if(waitKey(30) >= 0) break;
+<BR>  }
+<BR>  return 0;
+<BR>}
+</I>
 
 <H3><center> Resultados</center> </H3>
 
+Como proposto, pode-se ver nao so a diferenca na imagem, como o que mudou nos histogramas.<P>
+
 <center>
+<IMG SRC = "Exercicio5.png" width=50% height=50% alt="Exercicio 5">
 
 <H2>Exercicio 6 - </H2>
 </center>
 
+Esse exercicio envolve a utilizacao de filtros e video. Para isso, sera criado um programa .cpp que recebera <i>frames</i> de video e, dependendo do que o usuario selecionar, aplicara um filtro espacial atraves do uso de mascaras. Nesse caso, estaremos tambem testando o filtro laplaciano do gaussiano. <P>
+
 <H3><center> Teoria </center></H3>
+
+Para a execucao dessa proposta, os passos serao: a captura de imagens em fluxo, escolha do filtro, aplicacao da mascara e criacao de um novo fluxo de imagens. O programa feito cria mascaras 3x3 para os seguintes filtros: do modulo, da media, gaussiano, vertical, horizontal e laplaciano. Os filtros sao ativados pelas teclas "a", "m", "g", "v", "h" e "l", respectivamente. Para ativar o laplaciano do gaussiano, foi necessario uma mascara 5x5 e o usuario deve teclar "x". <P>
 
 
 <H3><center> Funcoes </center></H3>
 
+As principais funcoes para a realizacao desse exercicio seguem:
 
-<H3><center>Imagem</center></H3>
+<UL>
+<LI> mask: recebe uma matriz em ponto flutuante com valores da mascara correspondente ao filtro desejado.
+<LI> cvtColor: esta sendo usado para alterar o sistema de cores para tons de cinza.
+<LI> frame.convertTo: converte as imagens capturadas pela camera para pontos flutuantes.
+<LI> filter2D: realiza a convolucao da mascara com a imagem capturada.
 
-A imagem utilizada como base para esse exercicio esta mostrada a seguir:<P>
+</UL>
 
 <center>
-
-
 <H3> Codigo comentado </H3>
 </center>
+<I>
 
+#include <iostream>
+<BR>#include <opencv2/opencv.hpp>
+<BR>using namespace cv;
+<BR>using namespace std;
+<P>
+void printmask(Mat &m){
+<BR>  for(int i=0; i<m.size().height; i++){
+<BR>    for(int j=0; j<m.size().width; j++){
+<BR>      cout << m.at<float>(i,j) << ",";
+<BR>    }
+<BR>    cout << endl;
+<BR>  }
+<BR>}
+<P>
+void menu(){
+<BR>  cout << "\nPressione a tecla para ativar o filtro: \n"
+<BR>	  "a - Calcular o modulo\n"
+<BR>          "m - Media\n"
+<BR>          "g - Gauss\n"
+<BR>          "v - Vertical\n"
+<BR>	  "h - Horizontal\n"
+<BR>          "l - Laplaciano\n"
+<BR>          "x - Laplaciano do gaussiano\n"
+<BR>	  "esc - Sair\n";
+<BR>}
+<P>
+int main(int argvc, char** argv){
+<BR>  VideoCapture video;
+<BR>  float media[] = {1,1,1,
+<BR>				   1,1,1,
+<BR>				   1,1,1};
+<BR>  float gauss[] = {1,2,1,
+<BR>				   2,4,2,
+<BR>				   1,2,1};
+<BR>  float horizontal[]={-1,0,1,
+<BR>					  -2,0,2,
+<BR>					  -1,0,1};
+<BR>  float vertical[]={-1,-2,-1,
+<BR>					0,0,0,
+<BR>					1,2,1};
+<BR>  float laplacian[]={0,-1,0,
+<BR>					 -1,4,-1,
+<BR>					 0,-1,0};
+<BR>  float lap_gauss[]={0,0,1,0,0,
+<BR>		     0,1,2,1,0,
+<BR>		     1,2,-16,2,1,
+<BR>		     0,1,2,1,0,
+<BR>		     0,0,1,0,0};
+<P>
+  Mat cap, frame, frame32f, frameFiltered;
+<BR>  Mat mask(3,3,CV_32F), mask1;
+<BR>  Mat result, result1;
+<BR>  double width, height, min, max;
+<BR>  int absolut;
+<BR>  char key;
+<P>  
+  video.open(0); 
+<BR>  if(!video.isOpened()) 
+<BR>    return -1;
+<BR>  width=video.get(CV_CAP_PROP_FRAME_WIDTH);
+<BR>  height=video.get(CV_CAP_PROP_FRAME_HEIGHT);
+<BR>  std::cout << "Largura =" << width << "\n";;
+<BR>  std::cout << "Altura =" << height<< "\n";;
+<P>
+  namedWindow("filtroespacial",1);
+<P>
+  mask = Mat(3, 3, CV_32F, media); 
+<BR>  scaleAdd(mask, 1/9.0, Mat::zeros(3,3,CV_32F), mask1);
+<BR>  swap(mask, mask1);
+<BR>  absolut=1; // calcs abs of the image
+<P>
+  menu();
+<BR>  for(;;){
+<BR>    video >> cap; 
+<BR>    cvtColor(cap, frame, CV_BGR2GRAY);
+<BR>    flip(frame, frame, 1);
+<BR>    imshow("original", frame);
+<BR>    frame.convertTo(frame32f, CV_32F);
+<BR>    filter2D(frame32f, frameFiltered, frame32f.depth(), mask, Point(1,1), 0);
+<BR>    if(absolut){
+<BR>      frameFiltered=abs(frameFiltered);
+<BR>    }
+<BR>    frameFiltered.convertTo(result, CV_8U);
+<BR>    imshow("filtroespacial", result);
+<BR>    key = (char) waitKey(10);
+<BR>    if( key == 27 ) break; // esc pressed!
+<BR>    switch(key){
+<BR>    case 'a':
+<BR>	  menu();
+<BR>      absolut=!absolut;
+<BR>      break;
+<BR>    case 'm':
+<BR>	  menu();
+<BR>      mask = Mat(3, 3, CV_32F, media);
+<BR>      scaleAdd(mask, 1/9.0, Mat::zeros(3,3,CV_32F), mask1);
+<BR>      mask = mask1;
+<BR>      printmask(mask);
+<BR>      break;
+<BR>    case 'g':
+<BR>	  menu();
+<BR>      mask = Mat(3, 3, CV_32F, gauss);
+<BR>      scaleAdd(mask, 1/16.0, Mat::zeros(3,3,CV_32F), mask1);
+<BR>      mask = mask1;
+<BR>      printmask(mask);
+<BR>      break;
+<BR>    case 'h':
+<BR>	  menu();
+<BR>      mask = Mat(3, 3, CV_32F, horizontal);
+<BR>      printmask(mask);
+<BR>      break;
+<BR>    case 'v':
+<BR>	  menu();
+<BR>      mask = Mat(3, 3, CV_32F, vertical);
+<BR>      printmask(mask);
+<BR>      break;
+<BR>    case 'l':
+<BR>	  menu();
+<BR>      mask = Mat(3, 3, CV_32F, laplacian);
+<BR>      printmask(mask);
+<BR>      break;
+<BR>    case 'x':
+<BR>	  menu();
+<BR>      mask = Mat(5, 5, CV_32F, lap_gauss);
+<BR>      printmask(mask);
+<BR>      break;
+<BR>    default:
+<BR>      break;
+<BR>    }
+<BR>  }
+<BR>  return 0;
+<BR>}
+</I>
 <H3><center> Resultados</center> </H3>
 
-<center>
+No fim, o programa mostra a imagem original e o filtro desejado. Para poder compara o uso dos filtros, a seguir vem um exemplo do laplaciano do gaussiano e um com apenas o laplaciano: <P>
 
+<center>
+Laplaciano do gaussiano:<P>
+<IMG SRC = "Exercicio6.png" width=50% height=50% alt="Exercicio 61">
+<BR>Laplaciano:<P>
+<IMG SRC = "Exercicio61.png" width=50% height=50% alt="Exercicio 62">
 
 </font>
 </body>
