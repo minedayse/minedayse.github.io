@@ -7,7 +7,7 @@
 
 </head>
 
-<body style="height:100%; width:80%" bgcolor= "#0F000F">
+<body style="height:100%; width:80%" bgcolor="#0F000F">
 
 <font size = +2 face = "Arial" color="white" >
 
@@ -16,10 +16,19 @@
 Alunas: Dayse e Yasmin. <P>
 Professor: Agostinho Brito. <P>
 
+
+<H2><center> Introducao </center></H2>
+
+Essa pagina tem como objetivo explorar assuntos estudados em sala de aula atraves de exercicios propostos pelo professor. Ela foi construida por duas alunas da Universidade Federal do Rio Grande do Norte que estao cursando a disciplina de Processamento Digital de Imagens. <P>
+
+<H2><center> Material </center></H2>
+
+Para a realizacao dos exercicios propostos, utilizamos a ferramenta OpenCV e o sistema operacional Ubuntu. Pelo prompt de comando, o OpenCV foi instalado e configurado. O material que foi utilizado como base teorica para a realizacao desses exercicios encontra-se na pagina do professor, <A HREF="http://agostinhobritojr.github.io/"> Agostinho Brito </A> .
+
 <H2> <center> Exercicio 1 - Manipulacao de Pixels </center> </H2>
 
 Este exercicio tem o proposito de ajudar no entendimento sobre manipulacao de imagens, apos um estudo teorico sobre componentes de uma imagem e maneiras de manipula-la. 
-Para receber a imagem, fazer alteracoes nela, criar uma nova e exibi-la, sera utilizado o conjunto de bibliotecas OpenCV. O sistema operacional presente durante esse processo foi o Ubuntu. <P>
+Para receber a imagem, fazer alteracoes nela, criar uma nova e exibi-la, sera utilizado o conjunto de bibliotecas OpenCV. <P>
 O exercicio consiste em, dado dois valores P1 e P2, transformar uma imagem de forma que a regiao presente entre P1 e P2 conterao o negativo da mesma e o resto se mantera. Para isso, P1 e P2 devem ser valores presentes no conjunto de pixels da imagem e o resultado da transformacao se dara numa regiao com formato retangular. <P>
 
 <H3> <center> Teoria </center> </H3>
@@ -121,7 +130,7 @@ O exercicio consiste em, dado uma imagem, dividi-la em quatro regioes e trocar a
 A ideia para o funcionamento desse exercicio comecou com o upload de uma imagem escolhida previamente. Em seguida, para nao gastar mais linhas, deve-se definir logo a imagem nova e definir o valor de seus pixels de acordo com as regioes da imagem original.
 A separaracao das regioes escolhidas se dara variando do ponto inicial a metade do comprimento da imagem e a metade de sua altura para a regiao superior esquerda. <P>
 A regiao superior esqueda (1) sera definida dos valores iniciais de x e y ate a metade da altura e a metade da largura da imagem, respectivamente. A regiao superior direita (2) sera definida do ponto inicial ate a metade da altura para os valores de x e da metade do comprimento ate o final dele para os valores de y. A regiao inferior esquerda (3) sera definida da metade da altura ate o final dela para os valores de x e do ponto inicial ate a metade do comprimento para os valores de y. Seguindo a mesma logica, a ultima regiao (4) sera composta pelo que sobrou. <P>
-A troca pode ocorrer de tres formas: entre as regioes 1-2 e 3-4 (troca na horizontal), entre as regioes 1-3 e 2-4 (troca na vertical) ou entre as regioes 1-4 e 2-3. A logica dela consiste em armazenar os dados da primeira regiao numa variavel, depois modificar essa regiao com os dados da desejada e em seguida modificar os dados da desejada utilizando o que foi armazenado na variavel. Para finalizar, deve-se exibir na tela a nova imagem. <P>
+Nota-se que apenas 3 resultados podem ser obtidos, tendo em vista que a regiao 1 pode trocar de lugar com qualquer uma das 3 outras, contudo as duas que restarem devem trocar de lugar entre si. Entao, a troca pode ocorrer de tres formas: entre as regioes 1-2 e 3-4 (troca na horizontal), entre as regioes 1-3 e 2-4 (troca na vertical) ou entre as regioes 1-4 e 2-3. A logica dela consiste em armazenar os dados da primeira regiao numa variavel, depois modificar essa regiao com os dados da desejada e em seguida modificar os dados da desejada utilizando o que foi armazenado na variavel. Para finalizar, deve-se exibir na tela a nova imagem. <P>
 
 <H3> <center> Funcoes </center> </H3>
 
@@ -137,7 +146,7 @@ As funcoes adicionais essenciais para a execucao dessa atividade e o que elas re
 
 Para a realizacao do exercicio, foi utilizada a mesma imagem do exercicio anterior como base. Ela esta mostrada a seguir: <P>
 <center>
-<IMG SRC = "imagem.png" width=35% height = 35% alt="Exercicio 1">
+<IMG SRC = "imagem.png" width=35% height = 35% alt="Exemplo3">
 
 <H3> Codigo comentado </H3>
 </center>
@@ -229,15 +238,218 @@ srand(time(NULL));
 Para obter resultados, o codigo correspondente, com o nome "trocaderegioes.cpp", foi executado pelo prompt de comando. Esse exercicio foi executado diversas vezes, pois a troca de regioes esta aleatoria e assim foi possivel verificar todas as possibilidades, que estao mostradas a seguir: <P>
 <center>
 <BR>Troca 1-2, 3-4<P>
-<IMG SRC = "Exemplo21.png" width=35% height = 35% alt="Exercicio 1"> 
+<IMG SRC = "Exemplo21.png" width=35% height = 35% alt="Exercicio 21"> 
 <BR>Troca 1-3, 2-4<P>
-<IMG SRC = "Exemplo22.png" width=35% height = 35% alt="Exercicio 1"> 
+<IMG SRC = "Exemplo22.png" width=35% height = 35% alt="Exercicio 22"> 
 <BR>Troca 1-4, 2-3<P>
-<IMG SRC = "Exemplo23.png" width=35% height = 35% alt="Exercicio 1"> 
+<IMG SRC = "Exemplo23.png" width=35% height = 35% alt="Exercicio 23"> 
+
+<P>
+<H2>Exercicio 3 - Teoria sobre preenchimento de regioes</H2>
+</center>
+
+<H3><center> Identificacao do problema </center></H3>
+
+Tendo-se como exemplo o codigo a seguir, que rotula uma imagem binaria utilizando o algoritmo <i>seedfill</i> para descobrir aglomerados de pixels, ao analisa-lo, consegue-se verificar alguns possiveis problemas.<P>
+O principal dele e que o algoritmo de rolulacao nao consegue identificar mais de 255 objetos na imagem, porque ele trabalha com <i>grayscale</i>, que tem uma escala de tons de cinza que varia de 0 ate 255 e o algoritmo da diferentes rotulos.
+Logo, se ha mais de 255 objetos na imagem, nao existirao cores diferentes para completar a contagem.<P>
+
+
+<H3><center> Codigo comentado </center> </H3>
+</center>
+<I>
+#include <iostream>
+<BR>#include <opencv2/opencv.hpp>
+<P>
+using namespace cv;
+<P>
+int main(int argc, char** argv){
+<BR>  Mat image, mask;
+<BR>  int width, height;
+<BR>  int nobjects;
+<P>  
+  CvPoint p;
+<BR>  image = imread(argv[1],CV_LOAD_IMAGE_GRAYSCALE);
+<P>  
+  if(!image.data){
+<BR>    std::cout << "imagem nao carregou corretamente\n";
+<BR>    return(-1);
+<BR>  }
+<BR>  width=image.size().width;
+<BR>  height=image.size().height;
+<P>
+  p.x=0;
+<BR>  p.y=0;
+<P>
+  // busca objetos com buracos presentes
+<BR>  nobjects=0;
+<BR>  for(int i=0; i<height; i++){
+<BR>    for(int j=0; j<width; j++){
+<BR>      if(image.at<uchar>(i,j) == 255){
+<BR>		// achou um objeto
+<BR>		nobjects++;
+<BR>		p.x=j;
+<BR>		p.y=i;
+<BR>		floodFill(image,p,nobjects);
+<BR>	  }
+<BR>	}
+<BR>  }
+<BR>  imshow("image", image);
+<BR>  imwrite("labeling.png", image);
+<BR>  waitKey();
+<BR>  return 0;
+<BR>}
+</I>
+
+<H3> <center> Resolucao </center></H3> 
+
+Uma solucao simples para o problema em questao desse codigo, seria criar uma nova variavel para realizar a mesma contagem que o <i>nobjects</i> e que possa ser resetada se o valor maximo for atingido. Isso tudo sem comprometer a rotulacao dos objetos desejados.
+
+<center>
+
+<H2>Exercicio 4 - Identificando furos </H2>
+</center>
+
+Esse exercicio propoe a modificacao de um algoritmo de rotulacao para separar regioes desejadas e dentro delas selecionar um subconjunto. Dessa forma, deve-se praticar a logica e conceitos previos de rotulacao e de manipulacao de pixels. <P>
+A ideia e, dada uma imagem de cor binaria, com fundo preto e "bolhas" brancas espalhadas por ela, deve-se selecionar e contar as bolhas, separando-as entre as que possuem furo (em preto) e as que nao. <P>
+
+<H3><center> Teoria </center></H3>
+
+O codigo para a execucao desse exercicio consiste em tres passos principais. Inicialmente, deve-se retirar os elementos que tocam as bordas, ja que podem haver buracos nessas bolhas que nao sao visiveis na imagem disponivel. Para tanto, igualam-se todos os pixel da borda a 255 e depois pintam-se esses mesmos pixels e os que os tocam de 0.<P>
+Em seguida, faz-se a rotulacao dos objetos atraves do algoritmo <i>seedfill</i> ja visto. E, por fim, percorre-se cada objeto em busca de um pixel (ou mais) com a cor do fundo, realizando assim a contagem de elementos com e sem buracos.<P>
+Esse codigo contou com dois extras explicitados nos comentarios, onde os buracos podem ou nao ficar visiveis na imagem final e pode-se destinguir as bolhas com apenas dois tons de cinza (um para com buracos e outro para sem) ou com a mesma variacao de 0 a 255 do exercicio anterior.<P>
+Adicionalmente, o codigo gera uma nova imagem, com nome "labeling". <P>
+
+<H3><center> Funcoes </center></H3>
+
+As funcoes adicionais essenciais para a execucao dessa atividade e o que elas representam sao: <P>
+
+<UL>
+<LI> CvPoint: gera um ponto bidimensional.
+<LI> floodFill: executa o algoritmo <i>seedfill</i> na imagem com base em um pixel como semente.
+</UL>
+
+<H3><center>Imagem</center></H3>
+
+A imagem utilizada como base para esse exercicio esta mostrada a seguir:<P>
+
+<center>
+<IMG SRC = "imagem2.png" width=50% height=50% alt="Exemplo 4">
+
+<H3> Codigo comentado </H3>
+</center>
+<I>
+#include <iostream>
+<BR>#include <opencv2/opencv.hpp>
+<P>
+using namespace cv;
+<P>
+int main(int argc, char** argv){
+<BR>  Mat image, mask;
+<BR>  int width, height;
+<BR>  int nobjects, cont;
+<P>  
+  CvPoint p;
+<BR>  image = imread("imagem2.png",CV_LOAD_IMAGE_GRAYSCALE);
+<P>  
+  if(!image.data){
+<BR>    std::cout << "Erro: Nao foi possivel carregar a imagem.\n";
+<BR>    return(-1);
+<BR>  }
+<BR>  width=image.size().width;
+<BR>  height=image.size().height;
+<P>
+  p.x=0;
+<BR>  p.y=0;
+<P>
+  nobjects=0;
+<BR>  cont = 0;
+<BR>  for(int i=0; i<height; i++){
+<BR>    for(int j=0; j<width; j++){
+<BR>      if(image.at<uchar>(i,j) == 255){ // Encontrou um objeto
+<BR>		nobjects++;
+<BR>		cont++;
+<BR>		p.x=j;
+<BR>		p.y=i;
+<BR>		floodFill(image,p,cont);
+<BR>		if(cont==254){ cont = 0;} // Estourou o limite do contador, zerar
+<BR>	  }
+<BR>	}
+<BR>  } 
+<BR>  std::cout << "Numero de objetos: " << nobjects << "\n"; // Total de objetos encontrados
+<P>
+  imshow("image", image);
+<BR>  imwrite("labeling.png", image);
+<BR>  waitKey();
+<BR>  return 0;
+<BR>}
+</I>
+<H3><center> Resultados</center> </H3>
+
+Como resultado, pode-se ver que o codigo conseguiu diferenciar as bolhas e tambem fazer a variacao de tons, se desejado.<P>
+
+<center>
+
+Sem bolhas<P>
+<IMG SRC = "Exercicio41.png" width=50% height=50% alt="Exercicio 41">
+<BR>Com bolhas<P>
+<IMG SRC = "Exercicio42.png" width=50% height=50% alt="Exercicio 42">
+<BR>Com variacao de tons<P>
+<IMG SRC = "Exercicio43.png" width=50% height=50% alt="Exercicio 43">
+
+
+<H2>Exercicio 5 - </H2>
+</center>
+
+Esse exercicio tem como objetivo explorar o conhecimento sobre histogramas de uma imagem e a manipulacao dele atraves do conjunto de bibliotecas OpenCV, alem de utilizar captura de video. Para isso, a ideia e que, para cada imagem gerada, o programa .cpp equalize o histograma da imagem e mostre na tela.<P>
+
+<H3><center> Teoria </center></H3>
+
+Para o funcionamento desse, codigo, e necessario tres passos: capturar <i>frames</i> de video, realizar a equalizacao do histograma para cada imagem dessas e exibir as images apos a modificacao.<P>
+E importante saber que, para a manipulacao do histograma, foi necessario inicialmente muda-se o sistema de cores de RGB para YCrCb. Em seguida, o histograma pode ser calculado e normalizado.<P>
+
+<H3><center> Funcoes </center></H3>
+
+
+<H3><center>Imagem</center></H3>
+
+A imagem utilizada como base para esse exercicio esta mostrada a seguir:<P>
+
+<center>
+
+
+<H3> Codigo comentado </H3>
+</center>
+
+<H3><center> Resultados</center> </H3>
+
+<center>
+
+<H2>Exercicio 6 - </H2>
+</center>
+
+<H3><center> Teoria </center></H3>
+
+
+<H3><center> Funcoes </center></H3>
+
+
+<H3><center>Imagem</center></H3>
+
+A imagem utilizada como base para esse exercicio esta mostrada a seguir:<P>
+
+<center>
+
+
+<H3> Codigo comentado </H3>
+</center>
+
+<H3><center> Resultados</center> </H3>
+
+<center>
+
 
 </font>
 </body>
 
-
-</center>
 </html>
