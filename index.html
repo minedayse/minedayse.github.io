@@ -14,36 +14,36 @@
 <H1> <center> Exerc&iacutecios de Processamento Digital de Imagens com OpenCV </center> </H1>
 
 Alunas: Dayse Maranh&atildeo Cavalcanti<BR>
-Yasmin Honorio de Medeiros. <P>
+Yasmin Hon&oacuterio de Medeiros. <P>
 Professor: Agostinho Brito. <P>
 
 
 <H2><center> Introdu&ccedil&atildeo </center></H2>
 
-Essa pagina tem como objetivo explorar assuntos estudados em sala de aula atrav&eacutes de exerc&iacutecios propostos pelo professor. Ela foi constru&iacuteda por duas alunas da Universidade Federal do Rio Grande do Norte que estao cursando a disciplina de Processamento Digital de Imagens. <P>
+Essa p&aacutegina tem como objetivo explorar assuntos estudados em sala de aula atrav&eacutes de exerc&iacutecios propostos pelo professor. Ela foi constru&iacuteda por duas alunas da Universidade Federal do Rio Grande do Norte que est&atildeo cursando a disciplina de Processamento Digital de Imagens. <P>
 
 <H2><center> Material </center></H2>
 
-Para a realiza&ccedil&atildeo dos exerc&iacutecios propostos, utilizou-se a ferramenta OpenCV e o sistema operacional Ubuntu. Pelo prompt de comando, o OpenCV foi instalado e configurado. O material que foi utilizado como base teorica para a realiza&ccedil&atildeo desses exerc&iacutecios encontra-se na pagina do professor, <A HREF="http://agostinhobritojr.github.io/"> Agostinho Brito </A> .
+Para a realiza&ccedil&atildeo dos exerc&iacutecios propostos, utilizou-se a ferramenta OpenCV e o sistema operacional Ubuntu. Pelo prompt de comando, o OpenCV foi instalado e configurado. O material que foi utilizado como base te&oacuterica para a realiza&ccedil&atildeo desses exerc&iacutecios encontra-se na p&aacutegina do professor, <A HREF="http://agostinhobritojr.github.io/"> Agostinho Brito </A> .
 
 <H2> <center> Exerc&iacutecio 1 - Manipula&ccedil&atildeo de Pixels </center> </H2>
 
-Este exerc&iacutecio tem o proposito de ajudar no entendimento sobre manipulacao de imagens, apos um estudo teorico sobre componentes de uma imagem e maneiras de manipula-la. 
-Para receber a imagem, fazer altera&ccedil&otildees nela, criar uma nova e exib&iacute-la, sera utilizado o conjunto de bibliotecas OpenCV. <P>
-O exerc&iacutecio consiste em, dado dois valores P1 e P2, transformar uma imagem de forma que a regi&atildeo presente entre P1 e P2 contera o negativo da mesma e o resto se mantera. Para isso, P1 e P2 devem ser valores presentes no conjunto de pixels da imagem e o resultado da transforma&ccedil&atildeo se dara numa regi&atildeo com formato retangular. <P>
+Este exerc&iacutecio tem o prop&oacutesito de ajudar no entendimento sobre manipula&ccedil&atildeo de imagens, ap&oacutes um estudo te&oacuterico sobre componentes de uma imagem e maneiras de manipul&aacute-la. 
+Para receber a imagem, fazer altera&ccedil&otildees nela, criar uma nova e exib&iacute-la, ser&aacute utilizado o conjunto de bibliotecas OpenCV. <P>
+O exerc&iacutecio consiste em, dado dois valores P1 e P2, transformar uma imagem de forma que a regi&atildeo presente entre P1 e P2 conter&aacute o negativo da mesma e o resto se manter&aacute. Para isso, P1 e P2 devem ser valores presentes no conjunto de pixels da imagem e o resultado da transforma&ccedil&atildeo se dar&aacute numa regi&atildeo com formato retangular. <P>
 
 <H3> <center> Teoria </center> </H3>
 
-A ideia para a execu&ccedil&atildeo desse exerc&iacutecio consistiu em seu princ&iacutepio de fazer o upload de uma imagem em grayscale (tons de cinza) e ler os valores P1 e P2. Em seguida, deve-se criar uma regi&atildeo variando do ponto x do pixel P1 ao ponto x do pixel P2 e do ponto y de P1 ao ponto y de P2. Dentro dessa regiao, uma transforma&ccedil&atildeo sera feita, <P>
-Para finalizar, deve-se gerar uma imagem nova e exibi-la. <P>
+A ideia para a execu&ccedil&atildeo desse exerc&iacutecio consistiu em seu princ&iacutepio de fazer o upload de uma imagem em grayscale (tons de cinza) e ler os valores P1 e P2. Em seguida, deve-se criar uma regi&atildeo variando do ponto x do pixel P1 ao ponto x do pixel P2 e do ponto y de P1 ao ponto y de P2. Dentro dessa regi&atildeo, uma transforma&ccedil&atildeo ser&aacute feita. <P>
+Para finalizar, deve-se gerar uma imagem nova e exib&iacute-la. <P>
 
 <H3> <center> Fun&ccedil&otildees </center> </H3>
 
 As fun&ccedil&otildees fundamentais para a execu&ccedil&atildeo dessa atividade e o que elas representam s&atildeo: <P>
 
 <UL>
-<LI> Mat: cria uma matriz que armazenara os dados dos pixels das imagens.
-<LI> imread: le uma imagem e armazena numa matriz.
+<LI> Mat: cria uma matriz que armazenar&aacute os dados dos pixels das imagens.
+<LI> imread: l&ecitc uma imagem e armazena numa matriz.
 <LI> namedWindow: cria uma janela.
 <LI> imagem.at<uchar>(x, y): representa o valor do pixel de posi&ccedil&atildeo x e y da matriz imagem.
 <LI> imshow(,): mostra na janela uma imagem.
@@ -57,7 +57,7 @@ Para a realiza&ccedil&atildeo do exerc&iacutecio, foi utilizada a seguinte image
 <center>
 <IMG SRC = "imagem.png" width=35% height = 35% alt="Exemplo 1"> 
 
-<H3> Codigo comentado </H3>
+<H3> C&oacutedigo comentado </H3>
 </center>
 <font size = +1 face = "helvetica"> 
 
@@ -120,18 +120,18 @@ Apos a execu&ccedil&atildeo do codigo atrav&eacutes dos comandos "make negativo"
 <IMG SRC = "imagemnegativa.png" width=35% height = 35% alt="Exercicio 1"> 
 <P>
 
-<H2> Exerc&iacutecio 2 - Troca de Regioes </H2>
+<H2> Exerc&iacutecio 2 - Troca de Regi&otildees </H2>
 </center>
 
-Com este exerc&iacutecio, ve-se o resultado do aprendizado base com relacao a manipula&ccedil&atildeo de imagens. Para a realiza&ccedil&atildeo dele, sera necessario conceitos basicos de separacao de regi&otildees e programa&ccedil&atildeo. Para a execu&ccedil&atildeo dessa proposta, ainda sera utilizado o conjunto de bibliotecas OpenCV, de forma a receber a imagem, fazer alteracoes nela, criar uma nova e exib&iacute-la. <P>
-O exerc&iacutecio consiste em, dado uma imagem, divid&iacute-la em quatro regioes e trocar as posi&ccedil&otildees delas. Por exemplo, a regi&atildeo superior esquerda deve trocar de lugar com a inferior direita e a regi&atildeo superior direita deve ser trocada com a inferior esquerda. <P>
+Com este exerc&iacutecio, v&ecirc-se o resultado do aprendizado base com rela&ccedil&atildeo a manipula&ccedil&atildeo de imagens. Para a realiza&ccedil&atildeo dele, ser&aacute necess&aacuterio conceitos b&aacutesicos de separa&ccedil&aacuteo de regi&otildees e programa&ccedil&atildeo. Para a execu&ccedil&atildeo dessa proposta, ainda ser&aacute utilizado o conjunto de bibliotecas OpenCV, de forma a receber a imagem, fazer altera&ccedil&otildees nela, criar uma nova e exib&iacute-la. <P>
+O exerc&iacutecio consiste em, dado uma imagem, divid&iacute-la em quatro regi&otildees e trocar as posi&ccedil&otildees delas. Por exemplo, a regi&atildeo superior esquerda deve trocar de lugar com a inferior direita e a regi&atildeo superior direita deve ser trocada com a inferior esquerda. <P>
 
 <H3> <center> Teoria </center> </H3>
 
 A ideia para o funcionamento desse exerc&iacutecio comecou com o upload de uma imagem escolhida previamente. Em seguida, para n&atildeo gastar mais linhas, deve-se definir logo a imagem nova e definir o valor de seus pixels de acordo com as regi&otildees da imagem original.
-A separara&ccedil&atildeo das regi&otildees escolhidas se dara variando do ponto inicial a metade do comprimento da imagem e a metade de sua altura para a regi&atildeo superior esquerda. <P>
-A regi&atildeo superior esqueda (1) sera definida dos valores iniciais de x e y at&eacute a metade da altura e a metade da largura da imagem, respectivamente. A regi&atildeo superior direita (2) sera definida do ponto inicial at&eacute a metade da altura para os valores de x e da metade do comprimento at&eacute o final dele para os valores de y. A regi&atildeo inferior esquerda (3) sera definida da metade da altura at&eacute o final dela para os valores de x e do ponto inicial ate a metade do comprimento para os valores de y. Seguindo a mesma logica, a ultima regi&atildeo (4) sera composta pelo que sobrou. <P>
-Nota-se que apenas 3 resultados podem ser obtidos, tendo em vista que a regi&atildeo 1 pode trocar de lugar com qualquer uma das 3 outras, contudo as duas que restarem devem trocar de lugar entre si. Ent&atildeo, a troca pode ocorrer de tres formas: entre as regioes 1-2 e 3-4 (troca na horizontal), entre as regioes 1-3 e 2-4 (troca na vertical) ou entre as regioes 1-4 e 2-3. A logica dela consiste em armazenar os dados da primeira regi&atildeo numa variavel, depois modificar essa regi&atildeo com os dados da desejada e em seguida modificar os dados da desejada utilizando o que foi armazenado na variavel. Para finalizar, deve-se exibir na tela a nova imagem. <P>
+A separara&ccedil&atildeo das regi&otildees escolhidas se dar&aacute variando do ponto inicial a metade do comprimento da imagem e a metade de sua altura para a regi&atildeo superior esquerda. <P>
+A regi&atildeo superior esqueda (1) ser&aacute definida dos valores iniciais de x e y at&eacute a metade da altura e a metade da largura da imagem, respectivamente. A regi&atildeo superior direita (2) ser&aacute definida do ponto inicial at&eacute a metade da altura para os valores de x e da metade do comprimento at&eacute o final dele para os valores de y. A regi&atildeo inferior esquerda (3) ser&aacute definida da metade da altura at&eacute o final dela para os valores de x e do ponto inicial at&eacute a metade do comprimento para os valores de y. Seguindo a mesma l&oacutegica, a &uacuteltima regi&atildeo (4) ser&aacute composta pelo que sobrou. <P>
+Nota-se que apenas 3 resultados podem ser obtidos, tendo em vista que a regi&atildeo 1 pode trocar de lugar com qualquer uma das 3 outras, contudo as duas que restarem devem trocar de lugar entre si. Ent&atildeo, a troca pode ocorrer de tr&ecircs formas: entre as regi&otildees 1-2 e 3-4 (troca na horizontal), entre as regi&otildees 1-3 e 2-4 (troca na vertical) ou entre as regi&otildees 1-4 e 2-3. A l&oacutegica dela consiste em armazenar os dados da primeira regi&atildeo numa variavel, depois modificar essa regi&atildeo com os dados da desejada e em seguida modificar os dados da desejada utilizando o que foi armazenado na vari&aacutevel. Para finalizar, deve-se exibir na tela a nova imagem. <P>
 
 <H3> <center> Fun&ccedil&otildees </center> </H3>
 
@@ -145,11 +145,11 @@ As fun&ccedil&otildees adicionais essenciais para a execu&ccedil&atildeo dessa a
 
 <H3> <center> Imagem </center> </H3>
 
-Para a realiza&ccedil&atildeo desse exerc&iacutecio, foi utilizada a mesma imagem do exerc&iacutecio anterior como base. Ela esta mostrada a seguir: <P>
+Para a realiza&ccedil&atildeo desse exerc&iacutecio, foi utilizada a mesma imagem do exerc&iacutecio anterior como base. Ela est&aacute mostrada a seguir: <P>
 <center>
 <IMG SRC = "imagem.png" width=35% height = 35% alt="Exemplo3">
 
-<H3> Codigo comentado </H3>
+<H3> C&oacutedigo comentado </H3>
 </center>
 <font size = +1 face = "helvetica"> 
 
@@ -236,7 +236,7 @@ srand(time(NULL));
 
 <H3> <center> Resultados </center> </H3>
 
-Para obter resultados, o codigo correspondente, com o nome "trocaderegioes.cpp", foi executado pelo prompt de comando. Esse exerc&iacutecio foi executado diversas vezes, pois a troca de regi&otildees esta aleatoria e assim foi poss&iacutevel verificar todas as possibilidades, que est&atildeo mostradas a seguir: <P>
+Para obter resultados, o c&oacutedigo correspondente, com o nome "trocaderegioes.cpp", foi executado pelo prompt de comando. Esse exerc&iacutecio foi executado diversas vezes, pois a troca de regi&otildees est&aacute aleat&oacuteria e assim foi poss&iacutevel verificar todas as possibilidades, que est&atildeo mostradas a seguir: <P>
 <center>
 <BR>Troca 1-2, 3-4<P>
 <IMG SRC = "Exemplo21.png" width=35% height = 35% alt="Exercicio 21"> 
@@ -251,12 +251,12 @@ Para obter resultados, o codigo correspondente, com o nome "trocaderegioes.cpp",
 
 <H3><center> Identifica&ccedil&atildeo do problema </center></H3>
 
-Tendo-se como exemplo o codigo a seguir, que rotula uma imagem binaria utilizando o algoritmo <i>seedfill</i> para descobrir aglomerados de pixels, ao analisa-lo, consegue-se verificar alguns poss&iacuteveis problemas.<P>
-O principal dele &eacute que o algoritmo de rotulacao n&atildeo consegue identificar mais de 255 objetos na imagem, porque ele trabalha com <i>grayscale</i>, que tem uma escala de tons de cinza que varia de 0 ate 255 e o algoritmo da diferentes rotulos.
-Logo, se ha mais de 255 objetos na imagem, nao existir&atildeo cores diferentes para completar a contagem.<P>
+Tendo-se como exemplo o c&oacutedigo a seguir, que rotula uma imagem binaria utilizando o algoritmo <i>seedfill</i> para descobrir aglomerados de pixels, ao analis&aacute-lo, consegue-se verificar alguns poss&iacuteveis problemas.<P>
+O principal dele &eacute que o algoritmo de rotula&ccedil&atildeo n&atildeo consegue identificar mais de 255 objetos na imagem, porque ele trabalha com <i>grayscale</i>, que tem uma escala de tons de cinza que varia de 0 ate 255 e o algoritmo da diferentes r&oacutetulos.
+Logo, se h&aacute mais de 255 objetos na imagem, n&atildeo existir&atildeo cores diferentes para completar a contagem.<P>
 
 
-<H3><center> Codigo comentado </center> </H3>
+<H3><center> C&oacutedigo comentado </center> </H3>
 </center>
 <font size = +1 face = "helvetica"> 
 <I>
@@ -306,22 +306,22 @@ int main(int argc, char** argv){
 
 <H3> <center> Resolucao </center></H3> 
 
-Uma solu&ccedil&atildeo simples para o problema em quest&atildeo desse codigo, seria criar uma nova variavel para realizar a mesma contagem que o <i>nobjects</i> e que possa ser resetada se o valor maximo for atingido. Isso tudo sem comprometer a rotula&ccedil&atildeo dos objetos desejados.
+Uma solu&ccedil&atildeo simples para o problema em quest&atildeo desse c&oacutedigo, seria criar uma nova vari&aacutevel para realizar a mesma contagem que o <i>nobjects</i> e que possa ser resetada se o valor m&aacuteximo for atingido. Isso tudo sem comprometer a rotula&ccedil&atildeo dos objetos desejados.
 
 <center>
 
 <H2>Exerc&iacutecio 4 - Identificando furos </H2>
 </center>
 
-Esse Exerc&iacutecio propoe a modifica&ccedil&atildeo de um algoritmo de rotula&ccedil&atildeo para separar regi&otildees desejadas e dentro delas selecionar um subconjunto. Dessa forma, deve-se praticar a logica e conceitos previos de rotula&ccedil&atildeo e de manipula&ccedil&atildeo de pixels. <P>
-A ideia &eacute, dada uma imagem de cor binaria, com fundo preto e "bolhas" brancas espalhadas por ela, deve-se selecionar e contar as bolhas, separando-as entre as que possuem furo (em preto) e as que nao. <P>
+Esse Exerc&iacutecio prop&otildee a modifica&ccedil&atildeo de um algoritmo de rotula&ccedil&atildeo para separar regi&otildees desejadas e dentro delas selecionar um subconjunto. Dessa forma, deve-se praticar a l&oacutegica e conceitos pr&eacutevios de rotula&ccedil&atildeo e de manipula&ccedil&atildeo de pixels. <P>
+A ideia &eacute, dada uma imagem de cor bin&aacuteria, com fundo preto e "bolhas" brancas espalhadas por ela, deve-se selecionar e contar as bolhas, separando-as entre as que possuem furo (em preto) e as que n&atildeo. <P>
 
 <H3><center> Teoria </center></H3>
 
-O codigo para a execu&ccedil&atildeo desse exerc&iacutecio consiste em tres passos principais. Inicialmente, deve-se retirar os elementos que tocam as bordas, ja que podem haver buracos nessas bolhas que nao sao visiveis na imagem dispon&iacutevel. Para tanto, igualam-se todos os pixeis da borda a 255 e depois pinta-se esses mesmos pixels e os que os tocam de 0.<P>
-Em seguida, faz-se a rotula&ccedil&atildeo dos objetos atrav&eacutes do algoritmo <i>seedfill</i> ja visto. E, por fim, percorre-se cada objeto em busca de um pixel (ou mais) com a cor do fundo, realizando assim a contagem de elementos com e sem buracos.<P>
-Esse codigo contou com dois extras explicitados nos comentarios, onde os buracos podem ou nao ficar visiveis na imagem final e pode-se destinguir as bolhas com apenas dois tons de cinza (um para com buracos e outro para sem) ou com a mesma varia&ccedil&atildeo de 0 a 255 do exerc&iacutecio anterior.<P>
-Adicionalmente, o codigo gera uma nova imagem, com nome "labeling". <P>
+O c&oacutedigo para a execu&ccedil&atildeo desse exerc&iacutecio consiste em tr&ecircs passos principais. Inicialmente, deve-se retirar os elementos que tocam as bordas, j&aacute que podem haver buracos nessas bolhas que n&atildeo s&atildeo vis&iacuteveis na imagem dispon&iacutevel. Para tanto, igualam-se todos os pixeis da borda a 255 e depois pinta-se esses mesmos pixels e os que os tocam de 0.<P>
+Em seguida, faz-se a rotula&ccedil&atildeo dos objetos atrav&eacutes do algoritmo <i>seedfill</i> j&aacute visto. E, por fim, percorre-se cada objeto em busca de um pixel (ou mais) com a cor do fundo, realizando assim a contagem de elementos com e sem buracos.<P>
+Esse c&oacutedigo contou com dois extras explicitados nos coment&aacuterios, onde os buracos podem ou n&atildeo ficar vis&iacuteveis na imagem final e pode-se destinguir as bolhas com apenas dois tons de cinza (um para com buracos e outro para sem) ou com a mesma varia&ccedil&atildeo de 0 a 255 do exerc&iacutecio anterior.<P>
+Adicionalmente, o c&oacutedigo gera uma nova imagem, com nome "labeling". <P>
 
 <H3><center> Fun&ccedil&otildees </center></H3>
 
@@ -334,12 +334,12 @@ As fun&ccedil&otildees adicionais essenciais para a execu&ccedil&atildeo dessa a
 
 <H3><center>Imagem</center></H3>
 
-A imagem utilizada como base para esse exerc&iacutecio esta mostrada a seguir:<P>
+A imagem utilizada como base para esse exerc&iacutecio est&aacute mostrada a seguir:<P>
 
 <center>
 <IMG SRC = "imagem2.png" width=50% height=50% alt="Exemplo 4">
 
-<H3> Codigo comentado </H3>
+<H3> C&oacutedigo comentado </H3>
 </center>
 <font size = +1 face = "helvetica"> 
 <I>
@@ -392,7 +392,7 @@ int main(int argc, char** argv){
 
 <H3><center> Resultados</center> </H3>
 
-Como resultado, pode-se ver que o codigo conseguiu diferenciar as bolhas e tambem fazer a varia&ccedil&atildeo de tons, se desejado.<P>
+Como resultado, pode-se ver que o c&oacutedigo conseguiu diferenciar as bolhas e tamb&eacutem fazer a varia&ccedil&atildeo de tons, se desejado.<P>
 
 <center>
 
@@ -404,38 +404,38 @@ Sem bolhas<P>
 <IMG SRC = "Exercicio43.png" width=50% height=50% alt="Exercicio 43">
 
 
-<H2>Exerc&iacutecio 5 - Equalizacao de Histograma</H2>
+<H2>Exerc&iacutecio 5 - Equaliza&ccedil&atildeo de Histograma</H2>
 </center>
 
-Esse exerc&iacutecio tem como objetivo explorar o conhecimento sobre histogramas de uma imagem e a manipula&ccedil&atildeo dele atraves do conjunto de bibliotecas OpenCV, alem de utilizar captura de video. Para isso, a ideia &eacute que, para cada imagem gerada, o programa .cpp equalize o histograma da imagem e mostre na tela.<P>
+Esse exerc&iacutecio tem como objetivo explorar o conhecimento sobre histogramas de uma imagem e a manipula&ccedil&atildeo dele atrav&eacutes do conjunto de bibliotecas OpenCV, al&eacutem de utilizar captura de video. Para isso, a ideia &eacute que, para cada imagem gerada, o programa .cpp equalize o histograma da imagem e mostre na tela.<P>
 
 <H3><center> Teoria </center></H3>
 
-Para o funcionamento desse codigo sao necessarios tres passos: capturar <i>frames</i> de video, realizar a equaliza&ccedil&atildeo do histograma para cada imagem dessas e exibir as images apos a modificacao.<P>
-&Eacute importante saber que, para a manipulacao do histograma, foi necessario inicialmente mudar o sistema de cores de RGB para YCrCb. Em seguida, o histograma pode ser calculado e normalizado.<P>
+Para o funcionamento desse c&oacutedigo, s&atildeo necess&aacuterios tr&ecircs passos: capturar <i>frames</i> de video, realizar a equaliza&ccedil&atildeo do histograma para cada imagem dessas e exibir as images ap&oacutes a modifica&ccedil&atildeo.<P>
+&Eacute importante saber que, para a manipula&ccedil&atildeo do histograma, foi necess&aacuterio inicialmente mudar o sistema de cores de RGB para YCrCb. Em seguida, o histograma pode ser calculado e normalizado.<P>
 
 <H3><center> Fun&ccedil&otildees </center></H3>
 
 <UL>
-<LI> VideoCapture: classe que permite uma variavel fluxo de video, possui como principais fun&ccedil&otildees <i>open</i> (abre video da camera) e <i>get</i> (receber informacoes da captura).
+<LI> VideoCapture: classe que permite uma vari&aacutevel fluxo de video, possui como principais fun&ccedil&otildees <i>open</i> (abre video da camera) e <i>get</i> (receber informa&ccedil&otildees da captura).
 <LI> planes[]: separa a imagem em tons (planos) de vermelho, verde e azul.
 <LI> cvtColor: consegue alterar o sistema de cores.
 <LI> equalizeHist: equaliza diretamente um histograma.
 <LI> merge: junta os planos de cor em uma imagem so.
-<LI> calcHist: recebe referencia a ser processada, calcula o histograma e retorna para uma variavel definida.
-<LI> normalize: normaliza os valores do histograma para o ficarem proporcionais ao maximo e m&iacutenimo encontrado.
-<LI> line: gera grafico de barras.
+<LI> calcHist: recebe refer&ecircncia a ser processada, calcula o histograma e retorna para uma vari&aacutevel definida.
+<LI> normalize: normaliza os valores do histograma para o ficarem proporcionais ao m&aacuteximo e m&iacutenimo encontrado.
+<LI> line: gera gr&aacutefico de barras.
 </UL>
 
 <H3><center>Imagem</center></H3>
 
-Uma imagem para servir de previa foi mostrada, utilizando um algoritmo que exibe a imagem captada pela camera e gera o histograma.<P>
+Uma imagem para servir de pr&eacutevia foi mostrada, utilizando um algoritmo que exibe a imagem captada pela camera e gera o histograma.<P>
 
 <center>
 
 <IMG SRC = "Exemplo5.png" width=50% height=50% alt="Exemplo 5">
 
-<H3> Codigo comentado </H3>
+<H3> C&oacutedigo comentado </H3>
 </center>
 <font size = +1 face = "helvetica"> 
 <I>
@@ -526,7 +526,7 @@ int main(int argc, char** argv){
 </font>
 <H3><center> Resultados</center> </H3>
 
-Como proposto, pode-se ver n&atildeo apenas a diferenca na imagem, como o que mudou nos histogramas.<P>
+Como proposto, pode-se ver n&atildeo apenas a diferenca na imagem, mas tamb&eacutem o que mudou nos histogramas.<P>
 
 <center>
 <IMG SRC = "Exercicio5.png" width=50% height=50% alt="Exercicio 5">
@@ -534,11 +534,11 @@ Como proposto, pode-se ver n&atildeo apenas a diferenca na imagem, como o que mu
 <H2>Exerc&iacutecio 6 - </H2>
 </center>
 
-Esse exerc&iacutecio envolve a utilizacao de filtros e video. Para isso, sera criado um programa .cpp que recebera <i>frames</i> de video e, dependendo do que o usuario selecionar, aplicara um filtro espacial atraves do uso de mascaras. Nesse caso, estaremos tamb&eacutem testando o filtro laplaciano do gaussiano. <P>
+Esse exerc&iacutecio envolve a utiliza&ccedil&atildeo de filtros e video. Para isso, ser&aacute criado um programa .cpp que receber&aacute <i>frames</i> de video e, dependendo do que o usu&aacuterio selecionar, aplicar&aacute um filtro espacial atrav&eacutes do uso de m&aacutescaras. Nesse caso, estaremos tamb&eacutem testando o filtro laplaciano do gaussiano. <P>
 
 <H3><center> Teoria </center></H3>
 
-Para a execu&ccedil&atildeo dessa proposta, os passos ser&atildeo: a captura de imagens em fluxo, escolha do filtro, aplicacao da mascara e cria&ccedil&atildeo de um novo fluxo de imagens. O programa feito cria mascaras 3x3 para os seguintes filtros: do modulo, da media, gaussiano, vertical, horizontal e laplaciano. Os filtros s&atildeo ativados pelas teclas "a", "m", "g", "v", "h" e "l", respectivamente. Para ativar o laplaciano do gaussiano, foi necessario uma mascara 5x5 e o usuario deve teclar "x". <P>
+Para a execu&ccedil&atildeo dessa proposta, os passos ser&atildeo: a captura de imagens em fluxo, escolha do filtro, aplica&ccedil&atildeo da m&aacutescara e cria&ccedil&atildeo de um novo fluxo de imagens. O programa feito cria mascaras 3x3 para os seguintes filtros: do m&oacutedulo, da m&eacutedia, gaussiano, vertical, horizontal e laplaciano. Os filtros s&atildeo ativados pelas teclas "a", "m", "g", "v", "h" e "l", respectivamente. Para ativar o laplaciano do gaussiano, foi necess&aacuterio uma m&aacutescara 5x5 e o usu&aacuterio deve teclar "x". <P>
 
 
 <H3><center> Fun&ccedil&otildees </center></H3>
@@ -546,15 +546,15 @@ Para a execu&ccedil&atildeo dessa proposta, os passos ser&atildeo: a captura de 
 As principais fun&ccedil&otildees para a realiza&ccedil&atildeo desse exerc&iacutecio seguem:
 
 <UL>
-<LI> mask: recebe uma matriz em ponto flutuante com valores da mascara correspondente ao filtro desejado.
-<LI> cvtColor: esta sendo usado para alterar o sistema de cores para tons de cinza.
-<LI> frame.convertTo: converte as imagens capturadas pela camera para pontos flutuantes.
-<LI> filter2D: realiza a convolu&ccedil&atildeo da mascara com a imagem capturada.
+<LI> mask: recebe uma matriz em ponto flutuante com valores da m&aacutescara correspondente ao filtro desejado.
+<LI> cvtColor: est&aacute sendo usado para alterar o sistema de cores para tons de cinza.
+<LI> frame.convertTo: converte as imagens capturadas pela c&acircmera para pontos flutuantes.
+<LI> filter2D: realiza a convolu&ccedil&atildeo da m&aacutescara com a imagem capturada.
 
 </UL>
 
 <center>
-<H3> Codigo comentado </H3>
+<H3> C&oacutedigo comentado </H3>
 </center>
 <I>
 <font size = +1 face = "helvetica"> 
