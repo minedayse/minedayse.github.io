@@ -20,39 +20,39 @@ Professor: Agostinho Brito. <P>
 
 <H2><center> Introdu&ccedil&atildeo </center></H2>
 
-Essa p&aacutegina tem como objetivo explorar assuntos estudados em sala de aula atrav&eacutes de exerc&iacutecios propostos pelo professor. Ela foi constru&iacuteda por duas alunas da Universidade Federal do Rio Grande do Norte que est&atildeo cursando a disciplina de Processamento Digital de Imagens. <P>
+<p style="text-align: justify;">Essa p&aacutegina tem como objetivo explorar assuntos estudados em sala de aula atrav&eacutes de exerc&iacutecios propostos pelo professor. Ela foi constru&iacuteda por duas alunas da Universidade Federal do Rio Grande do Norte que est&atildeo cursando a disciplina de Processamento Digital de Imagens. <P>
 
 <H2><center> Material </center></H2>
 
-Para a realiza&ccedil&atildeo dos exerc&iacutecios propostos, utilizou-se a ferramenta OpenCV e o sistema operacional Ubuntu. Pelo prompt de comando, o OpenCV foi instalado e configurado. O material que foi utilizado como base te&oacuterica para a realiza&ccedil&atildeo desses exerc&iacutecios encontra-se na p&aacutegina do professor, <A HREF="http://agostinhobritojr.github.io/"> Agostinho Brito </A> .
+<p style="text-align: justify;">Para a realiza&ccedil&atildeo dos exerc&iacutecios propostos, utilizou-se a ferramenta OpenCV e o sistema operacional Ubuntu. Pelo prompt de comando, o OpenCV foi instalado e configurado. O material que foi utilizado como base te&oacuterica para a realiza&ccedil&atildeo desses exerc&iacutecios encontra-se na p&aacutegina do professor, <A HREF="http://agostinhobritojr.github.io/"> Agostinho Brito </A> .
 
 <H2> <center> Exerc&iacutecio 1 - Manipula&ccedil&atildeo de Pixels </center> </H2>
 
-Este exerc&iacutecio tem o prop&oacutesito de ajudar no entendimento sobre manipula&ccedil&atildeo de imagens, ap&oacutes um estudo te&oacuterico sobre componentes de uma imagem e maneiras de manipul&aacute-la. 
-Para receber a imagem, fazer altera&ccedil&otildees nela, criar uma nova e exib&iacute-la, ser&aacute utilizado o conjunto de bibliotecas OpenCV. <P>
-O exerc&iacutecio consiste em, dado dois valores P1 e P2, transformar uma imagem de forma que a regi&atildeo presente entre P1 e P2 conter&aacute o negativo da mesma e o resto se manter&aacute. Para isso, P1 e P2 devem ser valores presentes no conjunto de pixels da imagem e o resultado da transforma&ccedil&atildeo se dar&aacute numa regi&atildeo com formato retangular. <P>
+<p style="text-align: justify;">Este exerc&iacutecio tem o prop&oacutesito de ajudar no entendimento sobre manipula&ccedil&atildeo de imagens, ap&oacutes um estudo te&oacuterico sobre componentes de uma imagem e maneiras de manipul&aacute-la. 
+<p style="text-align: justify;">Para receber a imagem, fazer altera&ccedil&otildees nela, criar uma nova e exib&iacute-la, ser&aacute utilizado o conjunto de bibliotecas OpenCV. <P>
+<p style="text-align: justify;">O exerc&iacutecio consiste em, dado dois valores P1 e P2, transformar uma imagem de forma que a regi&atildeo presente entre P1 e P2 conter&aacute o negativo da mesma e o resto se manter&aacute. Para isso, P1 e P2 devem ser valores presentes no conjunto de pixels da imagem e o resultado da transforma&ccedil&atildeo se dar&aacute numa regi&atildeo com formato retangular. <P>
 
 <H3> <center> Teoria </center> </H3>
 
-A ideia para a execu&ccedil&atildeo desse exerc&iacutecio consistiu em seu princ&iacutepio de fazer o upload de uma imagem em grayscale (tons de cinza) e ler os valores P1 e P2. Em seguida, deve-se criar uma regi&atildeo variando do ponto x do pixel P1 ao ponto x do pixel P2 e do ponto y de P1 ao ponto y de P2. Dentro dessa regi&atildeo, uma transforma&ccedil&atildeo ser&aacute feita. <P>
-Para finalizar, deve-se gerar uma imagem nova e exib&iacute-la. <P>
+<p style="text-align: justify;">A ideia para a execu&ccedil&atildeo desse exerc&iacutecio consistiu em seu princ&iacutepio de fazer o upload de uma imagem em grayscale (tons de cinza) e ler os valores P1 e P2. Em seguida, deve-se criar uma regi&atildeo variando do ponto x do pixel P1 ao ponto x do pixel P2 e do ponto y de P1 ao ponto y de P2. Dentro dessa regi&atildeo, uma transforma&ccedil&atildeo ser&aacute feita. <P>
+<p style="text-align: justify;">Para finalizar, deve-se gerar uma imagem nova e exib&iacute-la. <P>
 
 <H3> <center> Fun&ccedil&otildees </center> </H3>
 
-As fun&ccedil&otildees fundamentais para a execu&ccedil&atildeo dessa atividade e o que elas representam s&atildeo: <P>
+<p style="text-align: justify;">As fun&ccedil&otildees fundamentais para a execu&ccedil&atildeo dessa atividade e o que elas representam s&atildeo: <P>
 
 <UL>
 <LI> Mat: cria uma matriz que armazenar&aacute os dados dos pixels das imagens.
-<LI> imread: l&ecitc uma imagem e armazena numa matriz.
+<LI> imread: l&ecirc uma imagem e armazena numa matriz.
 <LI> namedWindow: cria uma janela.
-<LI> imagem.at<uchar>(x, y): representa o valor do pixel de posi&ccedil&atildeo x e y da matriz imagem.
+<LI> imagem.at&lt;uchar>(x, y): representa o valor do pixel de posi&ccedil&atildeo x e y da matriz imagem.
 <LI> imshow(,): mostra na janela uma imagem.
 <LI> imwrite(,): cria um arquivo com uma matriz de imagem contida no programa.
 </UL>
 
 <H3> <center> Imagem </center> </H3>
 
-Para a realiza&ccedil&atildeo do exerc&iacutecio, foi utilizada a seguinte imagem como base: <P>
+<p style="text-align: justify;">Para a realiza&ccedil&atildeo do exerc&iacutecio, foi utilizada a seguinte imagem como base: <P>
 
 <center>
 <IMG SRC = "imagem.png" width=35% height = 35% alt="Exemplo 1"> 
@@ -62,9 +62,9 @@ Para a realiza&ccedil&atildeo do exerc&iacutecio, foi utilizada a seguinte image
 <font size = +1 face = "helvetica"> 
 
 <I>
-#include <iostream>
-<BR>#include <cv.h>
-<BR>#include <highgui.h>
+#include &lt;iostream>
+<BR>#include &lt;cv.h>
+<BR>#include &lt;highgui.h>
 <P>
 using namespace cv;
 <BR>using namespace std;
@@ -75,7 +75,7 @@ int main(int, char**){
   image= imread("imagem.png",CV_LOAD_IMAGE_GRAYSCALE);
 <P>
   if(!image.data){
-<BR>    cout << "Erro: Nao foi possivel carregar a imagem." << endl;
+<BR>    cout << "Erro: Nao foi possivel carregar a imagem." <&lt; endl;
 <BR>  }
 <P>
   else{
@@ -83,21 +83,21 @@ int main(int, char**){
 <P>
     int x1, x2, y1, y2;
 <P>
-    cout << "Ponto 1" << endl;
+    cout << "Ponto 1" <&lt; endl;
 <BR>    cout << "X: ";
 <BR>    cin >> x1;
 <BR>    cout << "Y: ";
 <BR>    cin >> y1;
-<BR>    cout << "Ponto 2" << endl;
+<BR>    cout << "Ponto 2" <&lt; endl;
 <BR>    cout << "X: ";
 <BR>    cin >> x2;
 <BR>    cout << "Y: ";
 <BR>    cin >> y2; 
 <P>
 // Negativar regiao entre os pontos 1 e 2
-<BR>    for(int i=x1;i<x2;i++){
-<BR>      for(int j=y1;j<y2;j++){
-<BR>        image.at<uchar>(i,j)=255 - image.at<uchar>(i,j);
+<BR>    for(int i=x1;i&lt;x2;i++){
+<BR>      for(int j=y1;j&lt;y2;j++){
+<BR>        image.at&lt;uchar>(i,j)=255 - image.at&lt;uchar>(i,j);
 <BR>      }
 <BR>    }
 <P>  
@@ -114,7 +114,7 @@ int main(int, char**){
 
 <H3> <center> Resultados </center> </H3>
 
-Apos a execu&ccedil&atildeo do codigo atrav&eacutes dos comandos "make negativo" e "./negativo" no prompt de comando, o programa pede os valores de P1 e P2, sendo primeiro o "x" e depois o "y" de cada ponto. Como exemplo, utilizou-se P1= (100, 100) e P2= (400, 400). O resultado do programa pode ser visto a seguir:
+<p style="text-align: justify;">Apos a execu&ccedil&atildeo do codigo atrav&eacutes dos comandos "make negativo" e "./negativo" no prompt de comando, o programa pede os valores de P1 e P2, sendo primeiro o "x" e depois o "y" de cada ponto. Como exemplo, utilizou-se P1= (100, 100) e P2= (400, 400). O resultado do programa pode ser visto a seguir:
 <P>
 <center>
 <IMG SRC = "imagemnegativa.png" width=35% height = 35% alt="Exercicio 1"> 
@@ -123,19 +123,19 @@ Apos a execu&ccedil&atildeo do codigo atrav&eacutes dos comandos "make negativo"
 <H2> Exerc&iacutecio 2 - Troca de Regi&otildees </H2>
 </center>
 
-Com este exerc&iacutecio, v&ecirc-se o resultado do aprendizado base com rela&ccedil&atildeo a manipula&ccedil&atildeo de imagens. Para a realiza&ccedil&atildeo dele, ser&aacute necess&aacuterio conceitos b&aacutesicos de separa&ccedil&aacuteo de regi&otildees e programa&ccedil&atildeo. Para a execu&ccedil&atildeo dessa proposta, ainda ser&aacute utilizado o conjunto de bibliotecas OpenCV, de forma a receber a imagem, fazer altera&ccedil&otildees nela, criar uma nova e exib&iacute-la. <P>
-O exerc&iacutecio consiste em, dado uma imagem, divid&iacute-la em quatro regi&otildees e trocar as posi&ccedil&otildees delas. Por exemplo, a regi&atildeo superior esquerda deve trocar de lugar com a inferior direita e a regi&atildeo superior direita deve ser trocada com a inferior esquerda. <P>
+<p style="text-align: justify;">Com este exerc&iacutecio, v&ecirc-se o resultado do aprendizado base com rela&ccedil&atildeo a manipula&ccedil&atildeo de imagens. Para a realiza&ccedil&atildeo dele, ser&aacute necess&aacuterio conceitos b&aacutesicos de separa&ccedil&aacuteo de regi&otildees e programa&ccedil&atildeo. Para a execu&ccedil&atildeo dessa proposta, ainda ser&aacute utilizado o conjunto de bibliotecas OpenCV, de forma a receber a imagem, fazer altera&ccedil&otildees nela, criar uma nova e exib&iacute-la. <P>
+<p style="text-align: justify;">O exerc&iacutecio consiste em, dado uma imagem, divid&iacute-la em quatro regi&otildees e trocar as posi&ccedil&otildees delas. Por exemplo, a regi&atildeo superior esquerda deve trocar de lugar com a inferior direita e a regi&atildeo superior direita deve ser trocada com a inferior esquerda. <P>
 
 <H3> <center> Teoria </center> </H3>
 
-A ideia para o funcionamento desse exerc&iacutecio comecou com o upload de uma imagem escolhida previamente. Em seguida, para n&atildeo gastar mais linhas, deve-se definir logo a imagem nova e definir o valor de seus pixels de acordo com as regi&otildees da imagem original.
-A separara&ccedil&atildeo das regi&otildees escolhidas se dar&aacute variando do ponto inicial a metade do comprimento da imagem e a metade de sua altura para a regi&atildeo superior esquerda. <P>
-A regi&atildeo superior esqueda (1) ser&aacute definida dos valores iniciais de x e y at&eacute a metade da altura e a metade da largura da imagem, respectivamente. A regi&atildeo superior direita (2) ser&aacute definida do ponto inicial at&eacute a metade da altura para os valores de x e da metade do comprimento at&eacute o final dele para os valores de y. A regi&atildeo inferior esquerda (3) ser&aacute definida da metade da altura at&eacute o final dela para os valores de x e do ponto inicial at&eacute a metade do comprimento para os valores de y. Seguindo a mesma l&oacutegica, a &uacuteltima regi&atildeo (4) ser&aacute composta pelo que sobrou. <P>
-Nota-se que apenas 3 resultados podem ser obtidos, tendo em vista que a regi&atildeo 1 pode trocar de lugar com qualquer uma das 3 outras, contudo as duas que restarem devem trocar de lugar entre si. Ent&atildeo, a troca pode ocorrer de tr&ecircs formas: entre as regi&otildees 1-2 e 3-4 (troca na horizontal), entre as regi&otildees 1-3 e 2-4 (troca na vertical) ou entre as regi&otildees 1-4 e 2-3. A l&oacutegica dela consiste em armazenar os dados da primeira regi&atildeo numa variavel, depois modificar essa regi&atildeo com os dados da desejada e em seguida modificar os dados da desejada utilizando o que foi armazenado na vari&aacutevel. Para finalizar, deve-se exibir na tela a nova imagem. <P>
+<p style="text-align: justify;">A ideia para o funcionamento desse exerc&iacutecio comecou com o upload de uma imagem escolhida previamente. Em seguida, para n&atildeo gastar mais linhas, deve-se definir logo a imagem nova e definir o valor de seus pixels de acordo com as regi&otildees da imagem original.
+<p style="text-align: justify;">A separara&ccedil&atildeo das regi&otildees escolhidas se dar&aacute variando do ponto inicial a metade do comprimento da imagem e a metade de sua altura para a regi&atildeo superior esquerda. <P>
+<p style="text-align: justify;">A regi&atildeo superior esqueda (1) ser&aacute definida dos valores iniciais de x e y at&eacute a metade da altura e a metade da largura da imagem, respectivamente. A regi&atildeo superior direita (2) ser&aacute definida do ponto inicial at&eacute a metade da altura para os valores de x e da metade do comprimento at&eacute o final dele para os valores de y. A regi&atildeo inferior esquerda (3) ser&aacute definida da metade da altura at&eacute o final dela para os valores de x e do ponto inicial at&eacute a metade do comprimento para os valores de y. Seguindo a mesma l&oacutegica, a &uacuteltima regi&atildeo (4) ser&aacute composta pelo que sobrou. <P>
+<p style="text-align: justify;">Nota-se que apenas 3 resultados podem ser obtidos, tendo em vista que a regi&atildeo 1 pode trocar de lugar com qualquer uma das 3 outras, contudo as duas que restarem devem trocar de lugar entre si. Ent&atildeo, a troca pode ocorrer de tr&ecircs formas: entre as regi&otildees 1-2 e 3-4 (troca na horizontal), entre as regi&otildees 1-3 e 2-4 (troca na vertical) ou entre as regi&otildees 1-4 e 2-3. A l&oacutegica dela consiste em armazenar os dados da primeira regi&atildeo numa variavel, depois modificar essa regi&atildeo com os dados da desejada e em seguida modificar os dados da desejada utilizando o que foi armazenado na vari&aacutevel. Para finalizar, deve-se exibir na tela a nova imagem. <P>
 
 <H3> <center> Fun&ccedil&otildees </center> </H3>
 
-As fun&ccedil&otildees adicionais essenciais para a execu&ccedil&atildeo dessa atividade e o que elas representam s&atildeo: <P>
+<p style="text-align: justify;">As fun&ccedil&otildees adicionais essenciais para a execu&ccedil&atildeo dessa atividade e o que elas representam s&atildeo: <P>
 
 <UL>
 <LI> rand: gera um numero aleatorio.
@@ -145,7 +145,7 @@ As fun&ccedil&otildees adicionais essenciais para a execu&ccedil&atildeo dessa a
 
 <H3> <center> Imagem </center> </H3>
 
-Para a realiza&ccedil&atildeo desse exerc&iacutecio, foi utilizada a mesma imagem do exerc&iacutecio anterior como base. Ela est&aacute mostrada a seguir: <P>
+<p style="text-align: justify;">Para a realiza&ccedil&atildeo desse exerc&iacutecio, foi utilizada a mesma imagem do exerc&iacutecio anterior como base. Ela est&aacute mostrada a seguir: <P>
 <center>
 <IMG SRC = "imagem.png" width=35% height = 35% alt="Exemplo3">
 
@@ -155,9 +155,9 @@ Para a realiza&ccedil&atildeo desse exerc&iacutecio, foi utilizada a mesma image
 
 <I>
 
-#include <iostream>
-<BR>#include <cv.h>
-<BR>#include <highgui.h>
+#include &lt;iostream>
+<BR>#include &lt;cv.h>
+<BR>#include &lt;highgui.h>
 <P>
 using namespace cv;
 <BR>using namespace std;
@@ -174,7 +174,7 @@ srand(time(NULL));
   image= imread("imagem.png",CV_LOAD_IMAGE_GRAYSCALE);
 <P>
   if(!image.data){
-<BR>    cout << "Erro: Nao foi possivel carregar a imagem." << endl;
+<BR>    cout << "Erro: Nao foi possivel carregar a imagem." <&lt; endl;
 <BR>  }
 <P>
   else{
@@ -186,38 +186,38 @@ srand(time(NULL));
 // Translacao
 <BR>  t = rand() % 3; // Troca aleatoria
 <BR>  if(t==0){ // 1-2, 3-4
-<BR>    for(int i=0;i<height/2;i++){
-<BR>      for(int j=0;j<width/2;j++){
-<BR>        aux1 = image.at<uchar>(i,j);
-<BR>        image.at<uchar>(i,j) = image.at<uchar>(i,j + width/2);
-<BR>        image.at<uchar>(i,j + width/2) = aux1;
-<BR>        aux2 = image.at<uchar>(i + height/2,j);
-<BR>        image.at<uchar>(i + height/2,j) = image.at<uchar>(i + height/2,j + width/2);
-<BR>        image.at<uchar>(i + height/2,j + width/2) = aux2;
+<BR>    for(int i=0;i&lt;height/2;i++){
+<BR>      for(int j=0;j&lt;width/2;j++){
+<BR>        aux1 = image.at&lt;uchar>(i,j);
+<BR>        image.at&lt;uchar>(i,j) = image.at&lt;uchar>(i,j + width/2);
+<BR>        image.at&lt;uchar>(i,j + width/2) = aux1;
+<BR>        aux2 = image.at&lt;uchar>(i + height/2,j);
+<BR>        image.at&lt;uchar>(i + height/2,j) = image.at&lt;uchar>(i + height/2,j + width/2);
+<BR>        image.at&lt;uchar>(i + height/2,j + width/2) = aux2;
 <BR>      }
 <BR>    }
 <BR>  }
 <BR>  else if(t==1){ // 1-3, 2-4
-<BR>    for(int i=0;i<height/2;i++){
-<BR>      for(int j=0;j<width/2;j++){
-<BR>        aux1 = image.at<uchar>(i,j);
-<BR>        image.at<uchar>(i,j) = image.at<uchar>(i + height/2,j);
-<BR>        image.at<uchar>(i + height/2,j) = aux1;
-<BR>        aux2 = image.at<uchar>(i,j + width/2);
-<BR>        image.at<uchar>(i,j + width/2) = image.at<uchar>(i + height/2,j + width/2);
-<BR>        image.at<uchar>(i + height/2,j + width/2) = aux2;
+<BR>    for(int i=0;i&lt;height/2;i++){
+<BR>      for(int j=0;j&lt;width/2;j++){
+<BR>        aux1 = image.at&lt;uchar>(i,j);
+<BR>        image.at&lt;uchar>(i,j) = image.at&lt;uchar>(i + height/2,j);
+<BR>        image.at&lt;uchar>(i + height/2,j) = aux1;
+<BR>        aux2 = image.at&lt;uchar>(i,j + width/2);
+<BR>        image.at&lt;uchar>(i,j + width/2) = image.at&lt;uchar>(i + height/2,j + width/2);
+<BR>        image.at&lt;uchar>(i + height/2,j + width/2) = aux2;
 <BR>      }
 <BR>     }
 <BR>  } 
 <BR>  else{ // 1-4, 2-3
-<BR>    for(int i=0;i<height/2;i++){
-<BR>      for(int j=0;j<width/2;j++){
-<BR>        aux1 = image.at<uchar>(i,j);
-<BR>        image.at<uchar>(i,j) = image.at<uchar>(i + height/2,j + width/2);
-<BR>        image.at<uchar>(i + height/2,j + width/2) = aux1;
-<BR>        aux2 = image.at<uchar>(i,j + width/2);
-<BR>        image.at<uchar>(i,j + width/2) = image.at<uchar>(i + height/2,j);
-<BR>        image.at<uchar>(i + height/2,j) = aux2;
+<BR>    for(int i=0;i&lt;height/2;i++){
+<BR>      for(int j=0;j&lt;width/2;j++){
+<BR>        aux1 = image.at&lt;uchar>(i,j);
+<BR>        image.at&lt;uchar>(i,j) = image.at&lt;uchar>(i + height/2,j + width/2);
+<BR>        image.at&lt;uchar>(i + height/2,j + width/2) = aux1;
+<BR>        aux2 = image.at&lt;uchar>(i,j + width/2);
+<BR>        image.at&lt;uchar>(i,j + width/2) = image.at&lt;uchar>(i + height/2,j);
+<BR>        image.at&lt;uchar>(i + height/2,j) = aux2;
 <BR>      }
 <BR>     }
 <BR>  }
@@ -236,7 +236,7 @@ srand(time(NULL));
 
 <H3> <center> Resultados </center> </H3>
 
-Para obter resultados, o c&oacutedigo correspondente, com o nome "trocaderegioes.cpp", foi executado pelo prompt de comando. Esse exerc&iacutecio foi executado diversas vezes, pois a troca de regi&otildees est&aacute aleat&oacuteria e assim foi poss&iacutevel verificar todas as possibilidades, que est&atildeo mostradas a seguir: <P>
+<p style="text-align: justify;">Para obter resultados, o c&oacutedigo correspondente, com o nome "trocaderegioes.cpp", foi executado pelo prompt de comando. Esse exerc&iacutecio foi executado diversas vezes, pois a troca de regi&otildees est&aacute aleat&oacuteria e assim foi poss&iacutevel verificar todas as possibilidades, que est&atildeo mostradas a seguir: <P>
 <center>
 <BR>Troca 1-2, 3-4<P>
 <IMG SRC = "Exemplo21.png" width=35% height = 35% alt="Exercicio 21"> 
@@ -251,17 +251,17 @@ Para obter resultados, o c&oacutedigo correspondente, com o nome "trocaderegioes
 
 <H3><center> Identifica&ccedil&atildeo do problema </center></H3>
 
-Tendo-se como exemplo o c&oacutedigo a seguir, que rotula uma imagem binaria utilizando o algoritmo <i>seedfill</i> para descobrir aglomerados de pixels, ao analis&aacute-lo, consegue-se verificar alguns poss&iacuteveis problemas.<P>
-O principal dele &eacute que o algoritmo de rotula&ccedil&atildeo n&atildeo consegue identificar mais de 255 objetos na imagem, porque ele trabalha com <i>grayscale</i>, que tem uma escala de tons de cinza que varia de 0 ate 255 e o algoritmo da diferentes r&oacutetulos.
-Logo, se h&aacute mais de 255 objetos na imagem, n&atildeo existir&atildeo cores diferentes para completar a contagem.<P>
+<p style="text-align: justify;">Tendo-se como exemplo o c&oacutedigo a seguir, que rotula uma imagem binaria utilizando o algoritmo <i>seedfill</i> para descobrir aglomerados de pixels, ao analis&aacute-lo, consegue-se verificar alguns poss&iacuteveis problemas.<P>
+<p style="text-align: justify;">O principal dele &eacute que o algoritmo de rotula&ccedil&atildeo n&atildeo consegue identificar mais de 255 objetos na imagem, porque ele trabalha com <i>grayscale</i>, que tem uma escala de tons de cinza que varia de 0 ate 255 e o algoritmo da diferentes r&oacutetulos.
+<p style="text-align: justify;">Logo, se h&aacute mais de 255 objetos na imagem, n&atildeo existir&atildeo cores diferentes para completar a contagem.<P>
 
 
 <H3><center> C&oacutedigo comentado </center> </H3>
 </center>
 <font size = +1 face = "helvetica"> 
 <I>
-#include <iostream>
-<BR>#include <opencv2/opencv.hpp>
+#include &lt;iostream>
+<BR>#include &lt;opencv2/opencv.hpp>
 <P>
 using namespace cv;
 <P>
@@ -285,9 +285,9 @@ int main(int argc, char** argv){
 <P>
   // busca objetos com buracos presentes
 <BR>  nobjects=0;
-<BR>  for(int i=0; i<height; i++){
-<BR>    for(int j=0; j<width; j++){
-<BR>      if(image.at<uchar>(i,j) == 255){
+<BR>  for(int i=0; i&lt;height; i++){
+<BR>    for(int j=0; j&lt;width; j++){
+<BR>      if(image.at&lt;uchar>(i,j) == 255){
 <BR>		// achou um objeto
 <BR>		nobjects++;
 <BR>		p.x=j;
@@ -304,28 +304,28 @@ int main(int argc, char** argv){
 </I>
 </font>
 
-<H3> <center> Resolucao </center></H3> 
+<H3> <center> Resultados </center></H3> 
 
-Uma solu&ccedil&atildeo simples para o problema em quest&atildeo desse c&oacutedigo, seria criar uma nova vari&aacutevel para realizar a mesma contagem que o <i>nobjects</i> e que possa ser resetada se o valor m&aacuteximo for atingido. Isso tudo sem comprometer a rotula&ccedil&atildeo dos objetos desejados.
+<p style="text-align: justify;">Uma solu&ccedil&atildeo simples para o problema em quest&atildeo desse c&oacutedigo, seria criar uma nova vari&aacutevel para realizar a mesma contagem que o <i>nobjects</i> e que possa ser resetada se o valor m&aacuteximo for atingido. Isso tudo sem comprometer a rotula&ccedil&atildeo dos objetos desejados.
 
 <center>
 
 <H2>Exerc&iacutecio 4 - Identificando furos </H2>
 </center>
 
-Esse Exerc&iacutecio prop&otildee a modifica&ccedil&atildeo de um algoritmo de rotula&ccedil&atildeo para separar regi&otildees desejadas e dentro delas selecionar um subconjunto. Dessa forma, deve-se praticar a l&oacutegica e conceitos pr&eacutevios de rotula&ccedil&atildeo e de manipula&ccedil&atildeo de pixels. <P>
-A ideia &eacute, dada uma imagem de cor bin&aacuteria, com fundo preto e "bolhas" brancas espalhadas por ela, deve-se selecionar e contar as bolhas, separando-as entre as que possuem furo (em preto) e as que n&atildeo. <P>
+<p style="text-align: justify;">Esse Exerc&iacutecio prop&otildee a modifica&ccedil&atildeo de um algoritmo de rotula&ccedil&atildeo para separar regi&otildees desejadas e dentro delas selecionar um subconjunto. Dessa forma, deve-se praticar a l&oacutegica e conceitos pr&eacutevios de rotula&ccedil&atildeo e de manipula&ccedil&atildeo de pixels. <P>
+<p style="text-align: justify;">A ideia &eacute, dada uma imagem de cor bin&aacuteria, com fundo preto e "bolhas" brancas espalhadas por ela, deve-se selecionar e contar as bolhas, separando-as entre as que possuem furo (em preto) e as que n&atildeo. <P>
 
 <H3><center> Teoria </center></H3>
 
-O c&oacutedigo para a execu&ccedil&atildeo desse exerc&iacutecio consiste em tr&ecircs passos principais. Inicialmente, deve-se retirar os elementos que tocam as bordas, j&aacute que podem haver buracos nessas bolhas que n&atildeo s&atildeo vis&iacuteveis na imagem dispon&iacutevel. Para tanto, igualam-se todos os pixeis da borda a 255 e depois pinta-se esses mesmos pixels e os que os tocam de 0.<P>
-Em seguida, faz-se a rotula&ccedil&atildeo dos objetos atrav&eacutes do algoritmo <i>seedfill</i> j&aacute visto. E, por fim, percorre-se cada objeto em busca de um pixel (ou mais) com a cor do fundo, realizando assim a contagem de elementos com e sem buracos.<P>
-Esse c&oacutedigo contou com dois extras explicitados nos coment&aacuterios, onde os buracos podem ou n&atildeo ficar vis&iacuteveis na imagem final e pode-se destinguir as bolhas com apenas dois tons de cinza (um para com buracos e outro para sem) ou com a mesma varia&ccedil&atildeo de 0 a 255 do exerc&iacutecio anterior.<P>
-Adicionalmente, o c&oacutedigo gera uma nova imagem, com nome "labeling". <P>
+<p style="text-align: justify;">O c&oacutedigo para a execu&ccedil&atildeo desse exerc&iacutecio consiste em tr&ecircs passos principais. Inicialmente, deve-se retirar os elementos que tocam as bordas, j&aacute que podem haver buracos nessas bolhas que n&atildeo s&atildeo vis&iacuteveis na imagem dispon&iacutevel. Para tanto, igualam-se todos os pixeis da borda a 255 e depois pinta-se esses mesmos pixels e os que os tocam de 0.<P>
+<p style="text-align: justify;">Em seguida, faz-se a rotula&ccedil&atildeo dos objetos atrav&eacutes do algoritmo <i>seedfill</i> j&aacute visto. E, por fim, percorre-se cada objeto em busca de um pixel (ou mais) com a cor do fundo, realizando assim a contagem de elementos com e sem buracos.<P>
+<p style="text-align: justify;">Esse c&oacutedigo contou com dois extras explicitados nos coment&aacuterios, onde os buracos podem ou n&atildeo ficar vis&iacuteveis na imagem final e pode-se destinguir as bolhas com apenas dois tons de cinza (um para com buracos e outro para sem) ou com a mesma varia&ccedil&atildeo de 0 a 255 do exerc&iacutecio anterior.<P>
+<p style="text-align: justify;">Adicionalmente, o c&oacutedigo gera uma nova imagem, com nome "labeling". <P>
 
 <H3><center> Fun&ccedil&otildees </center></H3>
 
-As fun&ccedil&otildees adicionais essenciais para a execu&ccedil&atildeo dessa atividade e o que elas representam s&atildeo: <P>
+<p style="text-align: justify;">As fun&ccedil&otildees adicionais essenciais para a execu&ccedil&atildeo dessa atividade e o que elas representam s&atildeo: <P>
 
 <UL>
 <LI> CvPoint: gera um ponto bidimensional.
@@ -334,7 +334,7 @@ As fun&ccedil&otildees adicionais essenciais para a execu&ccedil&atildeo dessa a
 
 <H3><center>Imagem</center></H3>
 
-A imagem utilizada como base para esse exerc&iacutecio est&aacute mostrada a seguir:<P>
+<p style="text-align: justify;">A imagem utilizada como base para esse exerc&iacutecio est&aacute mostrada a seguir:<P>
 
 <center>
 <IMG SRC = "imagem2.png" width=50% height=50% alt="Exemplo 4">
@@ -343,8 +343,8 @@ A imagem utilizada como base para esse exerc&iacutecio est&aacute mostrada a seg
 </center>
 <font size = +1 face = "helvetica"> 
 <I>
-#include <iostream>
-<BR>#include <opencv2/opencv.hpp>
+#include &lt;iostream>
+<BR>#include &lt;opencv2/opencv.hpp>
 <P>
 using namespace cv;
 <P>
@@ -368,9 +368,9 @@ int main(int argc, char** argv){
 <P>
   nobjects=0;
 <BR>  cont = 0;
-<BR>  for(int i=0; i<height; i++){
-<BR>    for(int j=0; j<width; j++){
-<BR>      if(image.at<uchar>(i,j) == 255){ // Encontrou um objeto
+<BR>  for(int i=0; i&lt;height; i++){
+<BR>    for(int j=0; j&lt;width; j++){
+<BR>      if(image.at&lt;uchar>(i,j) == 255){ // Encontrou um objeto
 <BR>		nobjects++;
 <BR>		cont++;
 <BR>		p.x=j;
@@ -380,7 +380,7 @@ int main(int argc, char** argv){
 <BR>	  }
 <BR>	}
 <BR>  } 
-<BR>  std::cout << "Numero de objetos: " << nobjects << "\n"; // Total de objetos encontrados
+<BR>  std::cout << "Numero de objetos: " <&lt; nobjects << "\n"; // Total de objetos encontrados
 <P>
   imshow("image", image);
 <BR>  imwrite("labeling.png", image);
@@ -392,7 +392,7 @@ int main(int argc, char** argv){
 
 <H3><center> Resultados</center> </H3>
 
-Como resultado, pode-se ver que o c&oacutedigo conseguiu diferenciar as bolhas e tamb&eacutem fazer a varia&ccedil&atildeo de tons, se desejado.<P>
+<p style="text-align: justify;">Como resultado, pode-se ver que o c&oacutedigo conseguiu diferenciar as bolhas e tamb&eacutem fazer a varia&ccedil&atildeo de tons, se desejado.<P>
 
 <center>
 
@@ -407,12 +407,12 @@ Sem bolhas<P>
 <H2>Exerc&iacutecio 5 - Equaliza&ccedil&atildeo de Histograma</H2>
 </center>
 
-Esse exerc&iacutecio tem como objetivo explorar o conhecimento sobre histogramas de uma imagem e a manipula&ccedil&atildeo dele atrav&eacutes do conjunto de bibliotecas OpenCV, al&eacutem de utilizar captura de video. Para isso, a ideia &eacute que, para cada imagem gerada, o programa .cpp equalize o histograma da imagem e mostre na tela.<P>
+<p style="text-align: justify;">Esse exerc&iacutecio tem como objetivo explorar o conhecimento sobre histogramas de uma imagem e a manipula&ccedil&atildeo dele atrav&eacutes do conjunto de bibliotecas OpenCV, al&eacutem de utilizar captura de video. Para isso, a ideia &eacute que, para cada imagem gerada, o programa .cpp equalize o histograma da imagem e mostre na tela.<P>
 
 <H3><center> Teoria </center></H3>
 
-Para o funcionamento desse c&oacutedigo, s&atildeo necess&aacuterios tr&ecircs passos: capturar <i>frames</i> de video, realizar a equaliza&ccedil&atildeo do histograma para cada imagem dessas e exibir as images ap&oacutes a modifica&ccedil&atildeo.<P>
-&Eacute importante saber que, para a manipula&ccedil&atildeo do histograma, foi necess&aacuterio inicialmente mudar o sistema de cores de RGB para YCrCb. Em seguida, o histograma pode ser calculado e normalizado.<P>
+<p style="text-align: justify;">Para o funcionamento desse c&oacutedigo, s&atildeo necess&aacuterios tr&ecircs passos: capturar <i>frames</i> de video, realizar a equaliza&ccedil&atildeo do histograma para cada imagem dessas e exibir as images ap&oacutes a modifica&ccedil&atildeo.<P>
+<p style="text-align: justify;">&Eacute importante saber que, para a manipula&ccedil&atildeo do histograma, foi necess&aacuterio inicialmente mudar o sistema de cores de RGB para YCrCb. Em seguida, o histograma pode ser calculado e normalizado.<P>
 
 <H3><center> Fun&ccedil&otildees </center></H3>
 
@@ -429,7 +429,7 @@ Para o funcionamento desse c&oacutedigo, s&atildeo necess&aacuterios tr&ecircs p
 
 <H3><center>Imagem</center></H3>
 
-Uma imagem para servir de pr&eacutevia foi mostrada, utilizando um algoritmo que exibe a imagem captada pela camera e gera o histograma.<P>
+<p style="text-align: justify;">Uma imagem para servir de pr&eacutevia foi mostrada, utilizando um algoritmo que exibe a imagem captada pela camera e gera o histograma.<P>
 
 <center>
 
@@ -439,8 +439,8 @@ Uma imagem para servir de pr&eacutevia foi mostrada, utilizando um algoritmo que
 </center>
 <font size = +1 face = "helvetica"> 
 <I>
-#include <iostream>
-<BR>#include <opencv2/opencv.hpp>
+#include &lt;iostream>
+<BR>#include &lt;opencv2/opencv.hpp>
 <P>
 using namespace cv;
 <BR>using namespace std;
@@ -449,7 +449,7 @@ int main(int argc, char** argv){
 <BR>  Mat rawimage, eqimage;
 <BR>  int width, height;
 <BR>  VideoCapture cap;
-<BR>  vector<Mat> planes;
+<BR>  vector&lt;Mat> planes;
 <BR>  Mat histR, histG, histB;
 <BR>  int nbins = 64;
 <BR>  float range[] = {0, 256};
@@ -467,8 +467,8 @@ int main(int argc, char** argv){
   width  = cap.get(CV_CAP_PROP_FRAME_WIDTH);
 <BR>  height = cap.get(CV_CAP_PROP_FRAME_HEIGHT);
 <P>
-  cout << "Largura = " << width << endl;
-<BR>  cout << "Altura  = " << height << endl;
+  cout << "Largura = " <&lt; width <&lt; endl;
+<BR>  cout << "Altura  = " <&lt; height <&lt; endl;
 <P>	
   int histw = nbins, histh = nbins/2;
 <BR>  Mat histImgR(histh, histw, CV_8UC3, Scalar(0,0,0));
@@ -478,7 +478,7 @@ int main(int argc, char** argv){
   while(1){
 <BR>    cap >> rawimage;
 <BR>    cvtColor(rawimage, eqimage, CV_BGR2YCrCb); // Muda a cor de RGB para YCrCb
-<BR>    for (int i=0; i<1; i++) {
+<BR>    for (int i=0; i&lt;1; i++) {
 <BR>	    split (eqimage, planes);
 <BR>	    equalizeHist(planes[i], planes[i]);
 <BR>	    merge(planes, eqimage);
@@ -503,7 +503,7 @@ int main(int argc, char** argv){
 <BR>    histImgG.setTo(Scalar(0));
 <BR>    histImgB.setTo(Scalar(0));
 <P>    
-    for(int i=0; i<nbins; i++){
+    for(int i=0; i&lt;nbins; i++){
 <BR>      line(histImgR, Point(i, histh),
 <BR>           Point(i, cvRound(histR.at<float>(i))),
 <BR>           Scalar(0, 0, 255), 1, 8, 0);
@@ -526,24 +526,24 @@ int main(int argc, char** argv){
 </font>
 <H3><center> Resultados</center> </H3>
 
-Como proposto, pode-se ver n&atildeo apenas a diferenca na imagem, mas tamb&eacutem o que mudou nos histogramas.<P>
+<p style="text-align: justify;">Como proposto, pode-se ver n&atildeo apenas a diferen&ccedila na imagem, mas tamb&eacutem o que mudou nos histogramas.<P>
 
 <center>
 <IMG SRC = "Exercicio5.png" width=50% height=50% alt="Exercicio 5">
 
-<H2>Exerc&iacutecio 6 - </H2>
+<H2>Exerc&iacutecio 6 - Filtragem Espacial</H2>
 </center>
 
-Esse exerc&iacutecio envolve a utiliza&ccedil&atildeo de filtros e video. Para isso, ser&aacute criado um programa .cpp que receber&aacute <i>frames</i> de video e, dependendo do que o usu&aacuterio selecionar, aplicar&aacute um filtro espacial atrav&eacutes do uso de m&aacutescaras. Nesse caso, estaremos tamb&eacutem testando o filtro laplaciano do gaussiano. <P>
+<p style="text-align: justify;">Esse exerc&iacutecio envolve a utiliza&ccedil&atildeo de filtros e video. Para isso, ser&aacute criado um programa .cpp que receber&aacute <i>frames</i> de video e, dependendo do que o usu&aacuterio selecionar, aplicar&aacute um filtro espacial atrav&eacutes do uso de m&aacutescaras. Nesse caso, estaremos tamb&eacutem testando o filtro laplaciano do gaussiano. <P>
 
 <H3><center> Teoria </center></H3>
 
-Para a execu&ccedil&atildeo dessa proposta, os passos ser&atildeo: a captura de imagens em fluxo, escolha do filtro, aplica&ccedil&atildeo da m&aacutescara e cria&ccedil&atildeo de um novo fluxo de imagens. O programa feito cria mascaras 3x3 para os seguintes filtros: do m&oacutedulo, da m&eacutedia, gaussiano, vertical, horizontal e laplaciano. Os filtros s&atildeo ativados pelas teclas "a", "m", "g", "v", "h" e "l", respectivamente. Para ativar o laplaciano do gaussiano, foi necess&aacuterio uma m&aacutescara 5x5 e o usu&aacuterio deve teclar "x". <P>
+<p style="text-align: justify;">Para a execu&ccedil&atildeo dessa proposta, os passos ser&atildeo: a captura de imagens em fluxo, escolha do filtro, aplica&ccedil&atildeo da m&aacutescara e cria&ccedil&atildeo de um novo fluxo de imagens. O programa feito cria mascaras 3x3 para os seguintes filtros: do m&oacutedulo, da m&eacutedia, gaussiano, vertical, horizontal e laplaciano. Os filtros s&atildeo ativados pelas teclas "a", "m", "g", "v", "h" e "l", respectivamente. Para ativar o laplaciano do gaussiano, foi necess&aacuterio uma m&aacutescara 5x5 e o usu&aacuterio deve teclar "x". <P>
 
 
 <H3><center> Fun&ccedil&otildees </center></H3>
 
-As principais fun&ccedil&otildees para a realiza&ccedil&atildeo desse exerc&iacutecio seguem:
+<p style="text-align: justify;">As principais fun&ccedil&otildees para a realiza&ccedil&atildeo desse exerc&iacutecio seguem:
 
 <UL>
 <LI> mask: recebe uma matriz em ponto flutuante com valores da m&aacutescara correspondente ao filtro desejado.
@@ -558,17 +558,17 @@ As principais fun&ccedil&otildees para a realiza&ccedil&atildeo desse exerc&iacu
 </center>
 <I>
 <font size = +1 face = "helvetica"> 
-#include <iostream>
-<BR>#include <opencv2/opencv.hpp>
+#include &lt;iostream>
+<BR>#include &lt;opencv2/opencv.hpp>
 <BR>using namespace cv;
 <BR>using namespace std;
 <P>
 void printmask(Mat &m){
-<BR>  for(int i=0; i<m.size().height; i++){
-<BR>    for(int j=0; j<m.size().width; j++){
-<BR>      cout << m.at<float>(i,j) << ",";
+<BR>  for(int i=0; i&lt;m.size().height; i++){
+<BR>    for(int j=0; j&lt;m.size().width; j++){
+<BR>      cout <&lt; m.at&lt;float>(i,j) << ",";
 <BR>    }
-<BR>    cout << endl;
+<BR>    cout <&lt; endl;
 <BR>  }
 <BR>}
 <P>
@@ -619,8 +619,8 @@ int main(int argvc, char** argv){
 <BR>    return -1;
 <BR>  width=video.get(CV_CAP_PROP_FRAME_WIDTH);
 <BR>  height=video.get(CV_CAP_PROP_FRAME_HEIGHT);
-<BR>  std::cout << "Largura =" << width << "\n";;
-<BR>  std::cout << "Altura =" << height<< "\n";;
+<BR>  std::cout << "Largura =" <&lt; width << "\n";;
+<BR>  std::cout << "Altura =" <&lt; height<< "\n";;
 <P>
   namedWindow("filtroespacial",1);
 <P>
@@ -693,13 +693,365 @@ int main(int argvc, char** argv){
 </I>
 <H3><center> Resultados</center> </H3>
 
-No fim, o programa mostra a imagem original e o filtro desejado. Para poder comparar o uso dos filtros, a seguir vem um exemplo do laplaciano do gaussiano e um com apenas o laplaciano: <P>
+<p style="text-align: justify;">No fim, o programa mostra a imagem original e o filtro desejado. Para poder comparar o uso dos filtros, a seguir vem um exemplo do laplaciano do gaussiano e um com apenas o laplaciano: <P>
 
 <center>
 Laplaciano do gaussiano:<P>
 <IMG SRC = "Exercicio6.png" width=80% height=80% alt="Exercicio 61">
 <BR>Laplaciano:<P>
 <IMG SRC = "Exercicio61.png" width=80% height=80% alt="Exercicio 62">
+
+
+<H2>Exerc&iacutecio 7 - Filtragem no Dom&iacutenio da Frequ&ecircncia</H2>
+</center>
+
+<p style="text-align: justify;">Esse exerc&iacutecio tem como objetivo explorar o conhecimento sobre espectro de frequ&ecircncia, uso da transformada discreta de fourier (DFT) e filtragem, de modo a tratar as imagens de maneira mais eficiente. Isso al&eacutem de incluir captura e tratamento de video.<P>
+<p style="text-align: justify;">A ideia proposta &eacute implementar um filtro homom&oacuterfico de forma a melhorar a ilumina&ccedil&atildeo de uma cena <i>grayscale</i>.
+
+<H3><center> Teoria </center></H3>
+
+<p style="text-align: justify;">A implementa&ccedil&atildeo do filtro homom&oacuterfico consiste em, primeiramente, separar as componentes de ilumina&ccedil&atildeo e reflect&acircncia, sendo que a multiplica&ccedil&atildeo delas deve ser equivalente ao valor da fun&ccedil&atildeo naquele ponto. A ilumina&ccedil&atildeo pode ser determinada pelas baixas frequ&ecircncias do espectro e a reflect&acircncia pelas altas frequ&ecircncias.<P>
+<p style="text-align: justify;">Depois, deve-se realizar a opera&ccedil&atildeo logaritmica sobre as componentes e em seguida fazer a transformada de Fourier. No dom&iacutenio da frequ&ecircncia, o filtro deve ser implementado. A nova fun&ccedil&atildeo retornar&aacute ent&atildeo o valor do espectro filtrado. Em seguida, as fun&ccedil&otildees complementares devem ser realizadas: a transformada inversa de fourier e o exponencial da fun&ccedil&atildeo. Por fim, o resultado ser&aacute mostrado na tela.
+
+<H3><center> Fun&ccedil&otildees </center></H3>
+
+<p style="text-align: justify;"> As fun&ccedil&otildees a seguir mostram os procedimentos novos e fundamentais para a execu&ccedil&atildeo desse exerc&iacutecio.
+
+<UL>
+<LI> getOptimalDFTSize(): retorna o menor valor N para que a imagem tenha dimens&otildees em pot&ecircncia de 2, sendo este melhor ou igual ao vecsize, de forma a acelerar o processo de c&aacutelculo da DFT.
+<LI> copyMakeBorder(): realiza o <i>padding</i> da imagem, gerando uma nova a partir da imagem inicial com o acr&eacutescimo de bordas de pixel 0.
+<LI> merge(): une dois vetores de matrizes em uma s&oacute, nesse caso para juntar o plano complexo e o real.
+<LI> mulSpectrum(): faz processo de filtragem no dom&iacutenio da frequ&ecircncia.
+<LI> split(): divide uma matriz multi-canal em matrizes de canal &uacutenico separadas.
+</UL>
+
+<H3><center>Imagem</center></H3>
+
+<p style="text-align: justify;">A imagem a seguir representa a original, para servir de pr&eacutevia, utilizando um algoritmo que exibe a imagem captada pela camera instantaneamente.<P>
+
+<center>
+
+<IMG SRC = "Exemplo7.png" width=50% height=50% alt="Exemplo 7">
+
+<H3> C&oacutedigo comentado </H3>
+</center>
+<font size = +1 face = "helvetica"> 
+<I>
+#include &lt;iostream>
+<BR>#include &lt;opencv2/opencv.hpp>
+<BR>#include &lt;opencv2/imgproc/imgproc.hpp>
+<BR>#include &lt;math.h>
+<P>
+#define RADIUS 10
+<BR>#define euler 2.71828182
+<P>
+using namespace cv;
+<BR>using namespace std;
+<P>
+// troca os quadrantes da imagem da DFT
+<BR>void deslocaDFT(Mat& image ){
+<BR>  Mat tmp, A, B, C, D;
+<P>
+  // se a imagem tiver tamanho impar, recorta a regiao para
+<BR>  // evitar cópias de tamanho desigual
+<BR>  image = image(Rect(0, 0, image.cols & -2, image.rows & -2));
+<BR>  int cx = image.cols/2;
+<BR>  int cy = image.rows/2;
+<P>  
+  // reorganiza os quadrantes da transformada
+<BR>  // A B   ->  D C
+<BR>  // C D       B A
+<BR>  A = image(Rect(0, 0, cx, cy));
+<BR>  B = image(Rect(cx, 0, cx, cy));
+<BR>  C = image(Rect(0, cy, cx, cy));
+<BR>  D = image(Rect(cx, cy, cx, cy));
+<P>
+  // A &lt;-> D
+<BR>  A.copyTo(tmp);  D.copyTo(A);  tmp.copyTo(D);
+<P>
+  // C &lt;-> B
+<BR>  C.copyTo(tmp);  B.copyTo(C);  tmp.copyTo(B);
+<BR>}
+<P>
+int main(int , char**){
+<BR>  float y_l, y_h;
+<BR>  float c = 1;
+<BR>  float D;
+<BR>  VideoCapture cap;   
+<BR>  Mat imaginaryInput, complexImage, multsp, complexImage2;
+<BR>  Mat padded, filter, mag;
+<BR>  Mat image, imagegray, tmp; 
+<BR>  Mat_&lt;float> realInput, zeros;
+<BR>  vector&lt;Mat> planos;
+<BR>  Mat img_final, img_log;
+<P>
+  // habilita/desabilita ruido
+<BR>  int noise=0;
+<BR>  // frequencia do ruido
+<BR>  int freq=100;
+<BR>  // ganho inicial do ruido
+<BR>  float gain=1;
+<P>
+  // valor do ruido
+<BR>  float mean;
+<P>
+  // guarda tecla capturada
+<BR>  char key;
+<P>
+  // valores ideais dos tamanhos da imagem
+<BR>  // para calculo da DFT
+<BR>  int dft_M, dft_N;
+<P>
+  // abre a câmera default
+<BR>  cap.open(0);
+<BR>  if(!cap.isOpened())
+<BR>    return -1;
+<P>
+  // captura uma imagem para recuperar as
+<BR>  // informacoes de gravação
+<BR>  cap >> image;
+<P>
+  // identifica os tamanhos otimos para
+<BR>  // calculo do FFT
+<BR>  dft_M = getOptimalDFTSize(image.rows);
+<BR>  dft_N = getOptimalDFTSize(image.cols);
+<P>
+  // realiza o padding da imagem
+<BR>  copyMakeBorder(image, padded, 0,
+<BR>                 dft_M - image.rows, 0,
+<BR>                 dft_N - image.cols,
+<BR>                 BORDER_CONSTANT, Scalar::all(0));
+<P>
+  // parte imaginaria da matriz complexa (preenchida com zeros)
+<BR>  zeros = Mat_&lt;float>::zeros(padded.size());
+<P>
+  // prepara a matriz complexa para ser preenchida
+<BR>  complexImage = Mat(padded.size(), CV_32FC2, Scalar(0));
+<P>
+  // prepara a matriz complexa para ser preenchida
+<BR>  complexImage2 = Mat(padded.size(), CV_32FC2, Scalar(0));
+<P>
+  // a função de transferência (filtro frequencial) deve ter o
+<BR>  // mesmo tamanho e tipo da matriz complexa
+<BR>  filter = complexImage.clone();
+<P>
+  // cria uma matriz temporária para criar as componentes real
+<BR>  // e imaginaria do filtro ideal
+<BR>  tmp = Mat(dft_M, dft_N, CV_32F);
+<P>
+  // prepara o filtro homomorfico
+<BR>  y_h = 1.5;
+<BR>  y_l = 0.5;
+<BR>  D = 0.7*dft_M/2;
+<BR>  for(int i=0; i&lt;dft_M; i++){
+<BR>    for(int j=0; j&lt;dft_N; j++){
+<BR>        tmp.at&lt;float> (i,j) = (y_h - y_l) * (1 - pow(euler,(-c*sqrt((i-dft_M/2)^2+(j-dft_N/2)^2)/pow(D,2)))) + y_l;
+<BR>    }
+<BR>  }
+<P>
+  // cria a matriz com as componentes do filtro e junta
+<BR>  // ambas em uma matriz multicanal complexa
+<BR>  Mat comps[] = {tmp, tmp};
+<BR>  merge(comps, 2, filter);
+<P>
+  for(;;){
+<BR>    cap >> image;
+<BR>    cvtColor(image, imagegray, CV_BGR2GRAY);
+<BR>    imshow("original", imagegray);
+<P>
+    // realiza o padding da imagem
+<BR>    copyMakeBorder(imagegray, padded, 0,
+<BR>                   dft_M - image.rows, 0,
+<BR>                   dft_N - image.cols,
+<BR>                   BORDER_CONSTANT, Scalar::all(0));
+<P>
+    // limpa o array de matrizes que vao compor a
+<BR>    // imagem complexa
+<BR>    planos.clear();
+<BR>    // cria a compoente real
+<BR>    realInput = Mat_&lt;float>(padded);
+<P>
+    //soma 1
+<BR>    for(int i=0; i&lt;dft_M; i++){
+<BR>      for(int j=0; j&lt;dft_N; j++){
+<BR>          realInput.at&lt;float>(i,j) = 255*realInput.at&lt;float>(i,j) + 1.0;
+<BR>      }
+<BR>    }
+<P>
+    //log da imagem 
+<BR>    log(realInput, img_log);
+<P>
+    // insere as duas componentes no array de matrizes
+<BR>    planos.push_back(img_log);
+<BR>    planos.push_back(zeros);
+<P>
+    // combina o array de matrizes em uma unica
+<BR>    // componente complexa
+<BR>    merge(planos, complexImage);
+<P>
+    // calcula o dft
+<BR>    dft(complexImage, complexImage);
+<P>
+    // realiza a troca de quadrantes
+<BR>    deslocaDFT(complexImage);
+<P>
+    // aplica o filtro frequencial
+<BR>    mulSpectrums(complexImage2,filter,complexImage2,0);
+<P>
+    // troca novamente os quadrantes
+<BR>    deslocaDFT(complexImage);
+<P>
+    // calcula a DFT inversa
+<BR>    idft(complexImage, complexImage);
+<P>
+    // limpa o array de planos
+<BR>    planos.clear();
+<P>
+    // separa as partes real e imaginaria da
+<BR>    // imagem filtrada
+<BR>    split(complexImage, planos);
+<P>
+    //exponencial para retomar a imagem
+<BR>//    exp(planos[0], planos[0]);
+<BR>    //exp alternativa
+<BR>    for(int i=0; i&lt;dft_M; i++){
+<BR>      for(int j=0; j&lt;dft_N; j++){
+<BR>//          planos[0].at&lt;float>(i,j) = exp(planos[0].at&lt;float>(i,j));
+<BR>      }
+<BR>    }
+<P>
+    // normaliza a parte real para exibicao
+<BR>    normalize(planos[0], planos[0], 0, 1, CV_MINMAX);
+<BR>    imshow("filtrada", planos[0]);
+<P> 
+    key = (char) waitKey(10);
+<BR>    if( key == 27 ) break; // esc pressed!
+<P>
+  }
+<BR>  return 0;
+<P>}
+</I>
+</font>
+<H3><center> Resultados</center> </H3>
+
+<p style="text-align: justify;">Apontou-se a c&acircmera para ambientes com ilumina&ccedil&otildees variadas e o filtro conseguiu corrigir os defeitos propostos na imagem, sendo not&aacutevel a diferen&ccedila de brilho.<P>
+
+<center>
+<IMG SRC = "Exercicio7.png" width=50% height=50% alt="Exercicio 7">
+
+<H2>Exerc&iacutecio 8 - Detec&ccedil&atildeo de Bordas com o Algoritmo de Canny</H2>
+</center>
+
+<p style="text-align: justify;">O exerc&iacutecio prop&otildee o estudo de t&eacutecnicas de detec&ccedil&atildeo de bordas e pontilhismo, unindo-as. A ideia &eacute fazer a implementa&ccedil&atildeo de um programa denominado cannypoints.cpp, o qual elabora uma pintura digital pontilhista a partir de uma imagem e usa as bordas geradas pelo algoritmo de Canny para aperfei&ccediloar a qualidade desta, principalmente para evitar espa&ccedilos vazios.<P>
+
+<H3><center> Teoria </center></H3>
+
+<p style="text-align: justify;">A arte do pontilhismo trata de uma t&eacutecnica de pintura impressionista tal que a disposi&ccedil&atildeo de pontos ou manchas (baseados nas leis complementares, onde estas s&atildeo justapostas) originam uma mistura visual a cargo do observador, uma vez que n&atildeo h&aacute linhas no desenho.<P>
+<p style="text-align: justify;">O algoritmo de Canny busca encontrar bordas nos m&aacuteximos locais do gradiente de uma imagem, para tanto ele segue as seguintes etapas:<P>
+<UL>
+<LI> Elimina&ccedil&atildeo o ru&iacutedo: Convolu&ccedil&atildeo com o filtro do gaussiano.
+<LI> Encontro do gradiente de intensidade da imagem: Aplicar um par de mascaras de convolu&ccedil&atildeo e encontrar o tamanho e a dire&ccedil&atildeo do gradiente.
+<LI> Supress&atildeo de m&aacuteximos: Remover pixels n&atildeo considerados de borda.
+<LI> Limiariza&ccedil&atildeo com histerese: A partir de dois limiares (T1 e T2) os pixel s&atildeo classificados como de borda forte ou fraca, determinando assim uma fronteira. Ocorre uma quebra de contorno e a borda se torna tracejada.
+</UL>
+<p style="text-align: justify;">O c&oacutedigo foi feito a partir da ideia de que para cada itera&ccedil&atildeo devem ser calculada as bordas de uma imagem com algoritmo de Canny e gerada uma imagem pontilhista seguindo essas refer&ecircncias. As imagens s&atildeo somadas e por fim geram uma saída com o resultado desejado.
+
+<H3><center> Fun&ccedil&otildees </center></H3>
+<p style="text-align: justify;">As principais fun&ccedil&otildees para a realiza&ccedil&atildeo desse exerc&iacutecio seguem:
+<UL>
+<LI> Canny(): realiza a detec&ccedil&atildeo de bordas na imagem dada, a sa&iacuteda &eacute uma outra imagem apenas com as bordas dados os limiares para an&aacutelise.
+<LI> circle(): tra&ccedila um c&iacuterculo, dados os parametros tem-se o raio especificado, preenchimento s&oacutelido e linha tipo "antialiased". 
+</UL>
+
+<H3><center>Imagem</center></H3>
+
+<p style="text-align: justify;">A imagem abaixo ser&aacute usada como base para algoritmo, deve-se obter sua representa&ccedil&atildeo em pintura pontilhista na saida.<P>
+
+<center>
+
+<IMG SRC = "imagem8.png" width=50% height=50% alt="Exercicio 8">
+
+<H3> C&oacutedigo comentado </H3>
+</center>
+<font size = +1 face = "helvetica"> 
+<I>
+#include &lt;iostream>
+<BR>#include "opencv2/opencv.hpp"
+<BR>#include &lt;vector>
+<BR>#include &lt;algorithm>
+<BR>#include &lt;numeric>
+<BR>#include &lt;ctime>
+<BR>#include &lt;cstdlib>
+<P>
+using namespace std;
+<BR>using namespace cv;
+<P>
+#define JITTER 3
+<P>
+int init;
+<BR>int it_max = 40;
+<BR>int STEP;
+<BR>float RAIO;
+<BR>int value;
+<P>
+char TrackbarName[50];
+<P>
+Mat image, border;
+<P>
+int main(int argc, char**argv){
+<BR>  Mat frame, points;
+<BR>  int width, height, gray;
+<BR>  int x, y;
+<P>
+  image= imread("imagem8.png",CV_LOAD_IMAGE_GRAYSCALE);
+<P>  
+  width=image.size().width;
+<BR>  height=image.size().height;
+<P>
+  init = height/100;
+<P>
+  //declara imagem final
+ <BR> points = image;
+<P>
+  //fazer canny para diferentes valores
+<BR>  for (int i=1; i&lt;it_max; i++) {
+<BR>	value = 2*i+init;
+<BR>  	Canny(image, border, value, 3*value);
+<P>
+	RAIO = 1+(it_max-i+10)/10;
+<BR>	STEP = RAIO+2;
+<P>
+  	//gera circulos
+<BR>  	for(int i=RAIO; i&lt;height; i=i+STEP){
+<BR>    		for(int j=RAIO; j&lt;width; j=j+STEP){
+<BR>      			gray = image.at&lt;uchar>(i,j);
+<BR>			if (border.at&lt;uchar>(i,j) > 200) {
+<BR>      				circle(points,
+             				cv::Point(j,i),
+             				RAIO,
+             				CV_RGB(gray,gray,gray),
+             				-1,
+             				CV_AA);
+<BR>			}
+<BR>    		}
+<BR>  	}
+<BR>  }
+<P>
+  imwrite("pontos.png", points);
+<BR>  imshow("pontos", points);
+<P>
+  return 0;
+<BR>}
+
+</I>
+</font>
+<H3><center> Resultados</center> </H3>
+
+<p style="text-align: justify;">Como proposto, a imagem obtida assemelha-se &agrave original por&eacutem &eacute composta apenas de manchas em formato circular que se justap&otildeem.<P>
+
+<center>
+<IMG SRC = "pontos.png" width=50% height=50% alt="Exercicio 8">
+
 
 </font>
 </body>
